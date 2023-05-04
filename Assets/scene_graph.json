@@ -1,0 +1,4009 @@
+{
+    "sceneGraphNodes": [
+        {
+            "name": "======== VR MANAGMENT ========",
+            "children": []
+        },
+        {
+            "name": "TeleportAnchors",
+            "children": [
+                {
+                    "name": "Teleportation Anchor (8)",
+                    "children": [
+                        {
+                            "name": "Anchor",
+                            "children": []
+                        },
+                        {
+                            "name": "Highlight",
+                            "children": []
+                        },
+                        {
+                            "name": "TeleporterBeamHigh",
+                            "children": []
+                        },
+                        {
+                            "name": "TeleportBeamLow",
+                            "children": []
+                        },
+                        {
+                            "name": "TeleporterPoint",
+                            "children": [
+                                {
+                                    "name": "GlyphQuad",
+                                    "children": []
+                                },
+                                {
+                                    "name": "GlyphQuad",
+                                    "children": []
+                                },
+                                {
+                                    "name": "TeleporterBeam",
+                                    "children": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "Teleportation Anchor (7)",
+                    "children": [
+                        {
+                            "name": "Anchor",
+                            "children": []
+                        },
+                        {
+                            "name": "Highlight",
+                            "children": []
+                        },
+                        {
+                            "name": "TeleporterBeamHigh",
+                            "children": []
+                        },
+                        {
+                            "name": "TeleportBeamLow",
+                            "children": []
+                        },
+                        {
+                            "name": "TeleporterPoint",
+                            "children": [
+                                {
+                                    "name": "GlyphQuad",
+                                    "children": []
+                                },
+                                {
+                                    "name": "GlyphQuad",
+                                    "children": []
+                                },
+                                {
+                                    "name": "TeleporterBeam",
+                                    "children": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "Teleportation Anchor (6)",
+                    "children": [
+                        {
+                            "name": "Anchor",
+                            "children": []
+                        },
+                        {
+                            "name": "Highlight",
+                            "children": []
+                        },
+                        {
+                            "name": "TeleporterBeamHigh",
+                            "children": []
+                        },
+                        {
+                            "name": "TeleportBeamLow",
+                            "children": []
+                        },
+                        {
+                            "name": "TeleporterPoint",
+                            "children": [
+                                {
+                                    "name": "GlyphQuad",
+                                    "children": []
+                                },
+                                {
+                                    "name": "GlyphQuad",
+                                    "children": []
+                                },
+                                {
+                                    "name": "TeleporterBeam",
+                                    "children": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "Teleportation Anchor (5)",
+                    "children": [
+                        {
+                            "name": "Anchor",
+                            "children": []
+                        },
+                        {
+                            "name": "Highlight",
+                            "children": []
+                        },
+                        {
+                            "name": "TeleporterBeamHigh",
+                            "children": []
+                        },
+                        {
+                            "name": "TeleportBeamLow",
+                            "children": []
+                        },
+                        {
+                            "name": "TeleporterPoint",
+                            "children": [
+                                {
+                                    "name": "GlyphQuad",
+                                    "children": []
+                                },
+                                {
+                                    "name": "GlyphQuad",
+                                    "children": []
+                                },
+                                {
+                                    "name": "TeleporterBeam",
+                                    "children": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "Teleportation Anchor (4)",
+                    "children": [
+                        {
+                            "name": "Anchor",
+                            "children": []
+                        },
+                        {
+                            "name": "Highlight",
+                            "children": []
+                        },
+                        {
+                            "name": "TeleporterBeamHigh",
+                            "children": []
+                        },
+                        {
+                            "name": "TeleportBeamLow",
+                            "children": []
+                        },
+                        {
+                            "name": "TeleporterPoint",
+                            "children": [
+                                {
+                                    "name": "GlyphQuad",
+                                    "children": []
+                                },
+                                {
+                                    "name": "GlyphQuad",
+                                    "children": []
+                                },
+                                {
+                                    "name": "TeleporterBeam",
+                                    "children": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "Teleportation Anchor (3)",
+                    "children": [
+                        {
+                            "name": "Anchor",
+                            "children": []
+                        },
+                        {
+                            "name": "Highlight",
+                            "children": []
+                        },
+                        {
+                            "name": "TeleporterBeamHigh",
+                            "children": []
+                        },
+                        {
+                            "name": "TeleportBeamLow",
+                            "children": []
+                        },
+                        {
+                            "name": "TeleporterPoint",
+                            "children": [
+                                {
+                                    "name": "GlyphQuad",
+                                    "children": []
+                                },
+                                {
+                                    "name": "GlyphQuad",
+                                    "children": []
+                                },
+                                {
+                                    "name": "TeleporterBeam",
+                                    "children": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "Teleportation Anchor (9)",
+                    "children": [
+                        {
+                            "name": "Anchor",
+                            "children": []
+                        },
+                        {
+                            "name": "Highlight",
+                            "children": []
+                        },
+                        {
+                            "name": "TeleporterBeamHigh",
+                            "children": []
+                        },
+                        {
+                            "name": "TeleportBeamLow",
+                            "children": []
+                        },
+                        {
+                            "name": "TeleporterPoint",
+                            "children": [
+                                {
+                                    "name": "GlyphQuad",
+                                    "children": []
+                                },
+                                {
+                                    "name": "GlyphQuad",
+                                    "children": []
+                                },
+                                {
+                                    "name": "TeleporterBeam",
+                                    "children": []
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "XR Interaction Manager",
+            "children": []
+        },
+        {
+            "name": "Locomotion System",
+            "children": []
+        },
+        {
+            "name": "XR Rig",
+            "children": [
+                {
+                    "name": "Camera Offset",
+                    "children": [
+                        {
+                            "name": "Main Camera",
+                            "children": []
+                        },
+                        {
+                            "name": "LeftHand Controller",
+                            "children": [
+                                {
+                                    "name": "AttachPoint",
+                                    "children": []
+                                },
+                                {
+                                    "name": "ModelTransform",
+                                    "children": []
+                                },
+                                {
+                                    "name": "Line",
+                                    "children": []
+                                }
+                            ]
+                        },
+                        {
+                            "name": "RightHand Controller",
+                            "children": [
+                                {
+                                    "name": "AttachPoint",
+                                    "children": []
+                                },
+                                {
+                                    "name": "ModelTransform",
+                                    "children": []
+                                },
+                                {
+                                    "name": "Line",
+                                    "children": []
+                                }
+                            ]
+                        },
+                        {
+                            "name": "RightHandTeleportation",
+                            "children": [
+                                {
+                                    "name": "StartPoint",
+                                    "children": []
+                                }
+                            ]
+                        },
+                        {
+                            "name": "LeftHandTeleportation",
+                            "children": [
+                                {
+                                    "name": "StartPoint",
+                                    "children": []
+                                }
+                            ]
+                        },
+                        {
+                            "name": "LeftUIInteractor",
+                            "children": [
+                                {
+                                    "name": "AttachPoint",
+                                    "children": []
+                                },
+                                {
+                                    "name": "AttachPoint",
+                                    "children": []
+                                }
+                            ]
+                        },
+                        {
+                            "name": "RightUIInteractor",
+                            "children": [
+                                {
+                                    "name": "AttachPoint",
+                                    "children": []
+                                },
+                                {
+                                    "name": "AttachPoint",
+                                    "children": []
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "SFXPlayer",
+            "children": [
+                {
+                    "name": "SFXSource",
+                    "children": []
+                }
+            ]
+        },
+        {
+            "name": "UIHook",
+            "children": []
+        },
+        {
+            "name": "CCSystem",
+            "children": [
+                {
+                    "name": "Canvas",
+                    "children": []
+                }
+            ]
+        },
+        {
+            "name": "EventSystem",
+            "children": []
+        },
+        {
+            "name": "======== VISUALS ========",
+            "children": []
+        },
+        {
+            "name": "Lights",
+            "children": [
+                {
+                    "name": "Directional Light (SHADOW)",
+                    "children": []
+                },
+                {
+                    "name": "Spot Light",
+                    "children": []
+                },
+                {
+                    "name": "Reflection Probe",
+                    "children": []
+                },
+                {
+                    "name": "Light Probe Group",
+                    "children": []
+                },
+                {
+                    "name": "Reflection Probe (1)",
+                    "children": []
+                },
+                {
+                    "name": "Point Light (1)",
+                    "children": []
+                },
+                {
+                    "name": "Spot Light (1)",
+                    "children": []
+                },
+                {
+                    "name": "Point Light (2)",
+                    "children": []
+                },
+                {
+                    "name": "Point Light (3)",
+                    "children": []
+                },
+                {
+                    "name": "Point Light (4)",
+                    "children": []
+                },
+                {
+                    "name": "Point Light (5)",
+                    "children": []
+                },
+                {
+                    "name": "Point Light (6)",
+                    "children": []
+                },
+                {
+                    "name": "Point Light (8)",
+                    "children": []
+                },
+                {
+                    "name": "Point Light (7)",
+                    "children": []
+                },
+                {
+                    "name": "Point Light (9)",
+                    "children": []
+                },
+                {
+                    "name": "Point Light (10)",
+                    "children": []
+                },
+                {
+                    "name": "Point Light (11)",
+                    "children": []
+                },
+                {
+                    "name": "Point Light (12)",
+                    "children": []
+                },
+                {
+                    "name": "Point Light (13)",
+                    "children": []
+                },
+                {
+                    "name": "Point Light (15)",
+                    "children": []
+                },
+                {
+                    "name": "Point Light (14)",
+                    "children": []
+                },
+                {
+                    "name": "Point Light (16)",
+                    "children": []
+                }
+            ]
+        },
+        {
+            "name": "PostProcessingVolume",
+            "children": []
+        },
+        {
+            "name": "======== ENVIRONMENT ========",
+            "children": []
+        },
+        {
+            "name": "AmbientAudio",
+            "children": []
+        },
+        {
+            "name": "EndAudioSource",
+            "children": []
+        },
+        {
+            "name": "EndingSphere",
+            "children": []
+        },
+        {
+            "name": "Interactables",
+            "children": [
+                {
+                    "name": "Onion",
+                    "children": []
+                },
+                {
+                    "name": "Cheese",
+                    "children": []
+                },
+                {
+                    "name": "Cheese",
+                    "children": []
+                },
+                {
+                    "name": "Feather",
+                    "children": []
+                },
+                {
+                    "name": "Orange",
+                    "children": []
+                },
+                {
+                    "name": "Feather",
+                    "children": []
+                },
+                {
+                    "name": "Orange",
+                    "children": []
+                },
+                {
+                    "name": "Feather",
+                    "children": []
+                },
+                {
+                    "name": "Cheese",
+                    "children": []
+                },
+                {
+                    "name": "Feather",
+                    "children": []
+                },
+                {
+                    "name": "Orange",
+                    "children": []
+                },
+                {
+                    "name": "Orange",
+                    "children": []
+                },
+                {
+                    "name": "MeatSlice",
+                    "children": []
+                },
+                {
+                    "name": "Onion",
+                    "children": []
+                },
+                {
+                    "name": "MeatSlice",
+                    "children": []
+                },
+                {
+                    "name": "MeatSlice",
+                    "children": []
+                },
+                {
+                    "name": "Onion",
+                    "children": []
+                },
+                {
+                    "name": "Onion",
+                    "children": []
+                },
+                {
+                    "name": "BookNavy Variant",
+                    "children": []
+                },
+                {
+                    "name": "BookNavy Variant",
+                    "children": []
+                },
+                {
+                    "name": "BookNavy Variant",
+                    "children": []
+                },
+                {
+                    "name": "BookNavy Variant",
+                    "children": []
+                },
+                {
+                    "name": "BookNavy Variant",
+                    "children": []
+                },
+                {
+                    "name": "BookNavy Variant",
+                    "children": []
+                },
+                {
+                    "name": "BookNavy Variant",
+                    "children": []
+                },
+                {
+                    "name": "BookNavy Variant",
+                    "children": []
+                },
+                {
+                    "name": "BookNavy Variant",
+                    "children": []
+                },
+                {
+                    "name": "BookNavy Variant",
+                    "children": []
+                },
+                {
+                    "name": "BookYellow Variant",
+                    "children": []
+                },
+                {
+                    "name": "BookYellow Variant",
+                    "children": []
+                },
+                {
+                    "name": "BookYellow Variant",
+                    "children": []
+                },
+                {
+                    "name": "BookYellow Variant",
+                    "children": []
+                },
+                {
+                    "name": "BookYellow Variant",
+                    "children": []
+                },
+                {
+                    "name": "BookYellow Variant",
+                    "children": []
+                },
+                {
+                    "name": "BookYellow Variant",
+                    "children": []
+                },
+                {
+                    "name": "BookYellow Variant",
+                    "children": []
+                },
+                {
+                    "name": "BookYellow Variant",
+                    "children": []
+                },
+                {
+                    "name": "BookYellow Variant",
+                    "children": []
+                },
+                {
+                    "name": "BookRed Variant",
+                    "children": []
+                },
+                {
+                    "name": "BookRed Variant",
+                    "children": []
+                },
+                {
+                    "name": "BookRed Variant",
+                    "children": []
+                },
+                {
+                    "name": "BookRed Variant",
+                    "children": []
+                },
+                {
+                    "name": "BookRed Variant",
+                    "children": []
+                },
+                {
+                    "name": "BookRed Variant",
+                    "children": []
+                },
+                {
+                    "name": "BookRed Variant",
+                    "children": []
+                },
+                {
+                    "name": "BookRed Variant",
+                    "children": []
+                },
+                {
+                    "name": "BookGreen Variant",
+                    "children": []
+                },
+                {
+                    "name": "BookGreen Variant",
+                    "children": []
+                },
+                {
+                    "name": "BookGreen Variant",
+                    "children": []
+                },
+                {
+                    "name": "BookGreen Variant",
+                    "children": []
+                },
+                {
+                    "name": "BookGreen Variant",
+                    "children": []
+                },
+                {
+                    "name": "BookGreen Variant",
+                    "children": []
+                },
+                {
+                    "name": "BookBlue Variant",
+                    "children": []
+                },
+                {
+                    "name": "BookBlue Variant",
+                    "children": []
+                },
+                {
+                    "name": "BookBlue Variant",
+                    "children": []
+                },
+                {
+                    "name": "BookBlue Variant",
+                    "children": []
+                },
+                {
+                    "name": "BookBlue Variant",
+                    "children": []
+                },
+                {
+                    "name": "BookBlue Variant",
+                    "children": []
+                },
+                {
+                    "name": "BookBlue Variant",
+                    "children": []
+                },
+                {
+                    "name": "BookBrown Variant",
+                    "children": []
+                },
+                {
+                    "name": "BookBrown Variant",
+                    "children": []
+                },
+                {
+                    "name": "BookBrown Variant",
+                    "children": []
+                },
+                {
+                    "name": "BookBrown Variant",
+                    "children": []
+                },
+                {
+                    "name": "BookBrown Variant",
+                    "children": []
+                },
+                {
+                    "name": "BookBrown Variant",
+                    "children": []
+                },
+                {
+                    "name": "BookBrown Variant",
+                    "children": []
+                },
+                {
+                    "name": "WoodenLog  Variant",
+                    "children": [
+                        {
+                            "name": "WoodenLog",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "name": "WoodenLog  Variant (1)",
+                    "children": [
+                        {
+                            "name": "WoodenLog",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "name": "WoodenLog  Variant (2)",
+                    "children": [
+                        {
+                            "name": "WoodenLog",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "name": "WoodenLog  Variant (3)",
+                    "children": [
+                        {
+                            "name": "WoodenLog",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "name": "WoodenLog  Variant (4)",
+                    "children": [
+                        {
+                            "name": "WoodenLog",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "name": "Feather (1)",
+                    "children": []
+                },
+                {
+                    "name": "Cheese (1)",
+                    "children": []
+                },
+                {
+                    "name": "Orange (1)",
+                    "children": []
+                },
+                {
+                    "name": "Onion (1)",
+                    "children": []
+                },
+                {
+                    "name": "Pumpking (6)",
+                    "children": []
+                },
+                {
+                    "name": "InstructionsShootingWand",
+                    "children": [
+                        {
+                            "name": "instructionsFrame",
+                            "children": []
+                        },
+                        {
+                            "name": "instructionsPaper",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "name": "Secret_instructions",
+                    "children": [
+                        {
+                            "name": "instructionsFrame",
+                            "children": []
+                        },
+                        {
+                            "name": "instructionsPaper",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "name": "Pumpking (5)",
+                    "children": []
+                },
+                {
+                    "name": "Pumpking (4)",
+                    "children": []
+                },
+                {
+                    "name": "Pumpking (3)",
+                    "children": []
+                },
+                {
+                    "name": "Pumpking (2)",
+                    "children": []
+                },
+                {
+                    "name": "Pumpking (1)",
+                    "children": []
+                },
+                {
+                    "name": "Pumpking",
+                    "children": []
+                },
+                {
+                    "name": "ForceInstructions",
+                    "children": []
+                },
+                {
+                    "name": "InstructionsBookAndShootingWand",
+                    "children": [
+                        {
+                            "name": "instructionsFrame",
+                            "children": []
+                        },
+                        {
+                            "name": "instructionsPaper",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "name": "GhostToy",
+                    "children": []
+                },
+                {
+                    "name": "Cauldron",
+                    "children": [
+                        {
+                            "name": "BrewButtonBase",
+                            "children": [
+                                {
+                                    "name": "BrewButto",
+                                    "children": []
+                                }
+                            ]
+                        },
+                        {
+                            "name": "CauldronLid",
+                            "children": [
+                                {
+                                    "name": "Trigger",
+                                    "children": []
+                                },
+                                {
+                                    "name": "CauldronPostIt",
+                                    "children": []
+                                },
+                                {
+                                    "name": "CauldronTarget",
+                                    "children": []
+                                }
+                            ]
+                        },
+                        {
+                            "name": "OpenCloseBase",
+                            "children": [
+                                {
+                                    "name": "OpenCloseButton",
+                                    "children": []
+                                }
+                            ]
+                        },
+                        {
+                            "name": "SpinForceBase",
+                            "children": [
+                                {
+                                    "name": "SpinForceLever",
+                                    "children": []
+                                }
+                            ]
+                        },
+                        {
+                            "name": "TemperatureLever",
+                            "children": []
+                        },
+                        {
+                            "name": "Water",
+                            "children": [
+                                {
+                                    "name": "CauldronSplash",
+                                    "children": []
+                                }
+                            ]
+                        },
+                        {
+                            "name": "AmbientBubblingSource",
+                            "children": []
+                        },
+                        {
+                            "name": "BrewingSound",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "name": "PotionSpawner",
+                    "children": [
+                        {
+                            "name": "PotionSpawner",
+                            "children": []
+                        },
+                        {
+                            "name": "SmokeBurst",
+                            "children": []
+                        },
+                        {
+                            "name": "SmokeBurstBad",
+                            "children": []
+                        },
+                        {
+                            "name": "SpawnPoint",
+                            "children": []
+                        },
+                        {
+                            "name": "Audio Source",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "name": "BookOfSpells",
+                    "children": [
+                        {
+                            "name": "Book",
+                            "children": [
+                                {
+                                    "name": "BookOfSpells",
+                                    "children": []
+                                },
+                                {
+                                    "name": "ROOT",
+                                    "children": [
+                                        {
+                                            "name": "Book",
+                                            "children": [
+                                                {
+                                                    "name": "BookBottom1",
+                                                    "children": [
+                                                        {
+                                                            "name": "BookBottom2",
+                                                            "children": []
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "name": "BookTop1",
+                                                    "children": [
+                                                        {
+                                                            "name": "BookTop2",
+                                                            "children": []
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "name": "Spawn_Page",
+                                                    "children": []
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "name": "Attach",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "name": "KeyForDesk",
+                    "children": [
+                        {
+                            "name": "Attach",
+                            "children": []
+                        },
+                        {
+                            "name": "Key",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "name": "Kitchen",
+                    "children": [
+                        {
+                            "name": "Kitchen",
+                            "children": [
+                                {
+                                    "name": "Kitchen 1",
+                                    "children": [
+                                        {
+                                            "name": "KitchenLeftDoor",
+                                            "children": [
+                                                {
+                                                    "name": "Handle",
+                                                    "children": []
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "name": "KitchenRightDoor",
+                                            "children": [
+                                                {
+                                                    "name": "Handle",
+                                                    "children": []
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "Radio",
+                    "children": [
+                        {
+                            "name": "RadioLeftKnob",
+                            "children": []
+                        },
+                        {
+                            "name": "RadioRightKnob",
+                            "children": []
+                        },
+                        {
+                            "name": "MusicSource",
+                            "children": []
+                        },
+                        {
+                            "name": "NoiseSource",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "name": "Wand",
+                    "children": [
+                        {
+                            "name": "WandSparklePink",
+                            "children": []
+                        },
+                        {
+                            "name": "WandAttach",
+                            "children": []
+                        },
+                        {
+                            "name": "WandSparkleGreen",
+                            "children": []
+                        },
+                        {
+                            "name": "ProjectileSpawn",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "name": "Desk",
+                    "children": [
+                        {
+                            "name": "Closet1",
+                            "children": [
+                                {
+                                    "name": "Box",
+                                    "children": []
+                                }
+                            ]
+                        },
+                        {
+                            "name": "Closet2",
+                            "children": [
+                                {
+                                    "name": "Box 1",
+                                    "children": []
+                                }
+                            ]
+                        },
+                        {
+                            "name": "Closet3",
+                            "children": [
+                                {
+                                    "name": "Box 2",
+                                    "children": []
+                                },
+                                {
+                                    "name": "Keyhole",
+                                    "children": [
+                                        {
+                                            "name": "Attach",
+                                            "children": []
+                                        },
+                                        {
+                                            "name": "Audio Source",
+                                            "children": []
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "name": "Closet4",
+                            "children": [
+                                {
+                                    "name": "Box 3",
+                                    "children": [
+                                        {
+                                            "name": "LittleVillage",
+                                            "children": [
+                                                {
+                                                    "name": "Totem",
+                                                    "children": []
+                                                },
+                                                {
+                                                    "name": "ExteriorShack1",
+                                                    "children": []
+                                                },
+                                                {
+                                                    "name": "ExteriorShack2",
+                                                    "children": []
+                                                },
+                                                {
+                                                    "name": "Fence1",
+                                                    "children": []
+                                                },
+                                                {
+                                                    "name": "Fence2",
+                                                    "children": []
+                                                },
+                                                {
+                                                    "name": "Fence3",
+                                                    "children": []
+                                                },
+                                                {
+                                                    "name": "Fence4",
+                                                    "children": []
+                                                },
+                                                {
+                                                    "name": "Fence5",
+                                                    "children": []
+                                                },
+                                                {
+                                                    "name": "Fence6",
+                                                    "children": []
+                                                },
+                                                {
+                                                    "name": "LittleVillageHill",
+                                                    "children": []
+                                                },
+                                                {
+                                                    "name": "LittleVillageWell",
+                                                    "children": []
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Potions",
+            "children": [
+                {
+                    "name": "PotionBottle_2",
+                    "children": [
+                        {
+                            "name": "LiquidParticle",
+                            "children": []
+                        },
+                        {
+                            "name": "Liquid",
+                            "children": []
+                        },
+                        {
+                            "name": "Glass",
+                            "children": []
+                        },
+                        {
+                            "name": "Plug",
+                            "children": []
+                        },
+                        {
+                            "name": "PotionPop",
+                            "children": []
+                        },
+                        {
+                            "name": "LiquidParticleSplash",
+                            "children": []
+                        },
+                        {
+                            "name": "potion_bottle_2_broken",
+                            "children": [
+                                {
+                                    "name": "BrokenPiece",
+                                    "children": []
+                                },
+                                {
+                                    "name": "BrokenPiece1",
+                                    "children": []
+                                },
+                                {
+                                    "name": "BrokenPiece2",
+                                    "children": []
+                                },
+                                {
+                                    "name": "BrokenPiece3",
+                                    "children": []
+                                },
+                                {
+                                    "name": "BrokenPiece4",
+                                    "children": []
+                                },
+                                {
+                                    "name": "BrokenPiece5",
+                                    "children": []
+                                },
+                                {
+                                    "name": "BrokenPiece6",
+                                    "children": []
+                                },
+                                {
+                                    "name": "BrokenPiece7",
+                                    "children": []
+                                },
+                                {
+                                    "name": "BrokenPiece8",
+                                    "children": []
+                                },
+                                {
+                                    "name": "BrokenPiece9",
+                                    "children": []
+                                },
+                                {
+                                    "name": "BrokenPiece10",
+                                    "children": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "PotionBottle_2",
+                    "children": [
+                        {
+                            "name": "LiquidParticle",
+                            "children": []
+                        },
+                        {
+                            "name": "Liquid",
+                            "children": []
+                        },
+                        {
+                            "name": "Glass",
+                            "children": []
+                        },
+                        {
+                            "name": "Plug",
+                            "children": []
+                        },
+                        {
+                            "name": "PotionPop",
+                            "children": []
+                        },
+                        {
+                            "name": "LiquidParticleSplash",
+                            "children": []
+                        },
+                        {
+                            "name": "potion_bottle_2_broken",
+                            "children": [
+                                {
+                                    "name": "BrokenPiece",
+                                    "children": []
+                                },
+                                {
+                                    "name": "BrokenPiece1",
+                                    "children": []
+                                },
+                                {
+                                    "name": "BrokenPiece2",
+                                    "children": []
+                                },
+                                {
+                                    "name": "BrokenPiece3",
+                                    "children": []
+                                },
+                                {
+                                    "name": "BrokenPiece4",
+                                    "children": []
+                                },
+                                {
+                                    "name": "BrokenPiece5",
+                                    "children": []
+                                },
+                                {
+                                    "name": "BrokenPiece6",
+                                    "children": []
+                                },
+                                {
+                                    "name": "BrokenPiece7",
+                                    "children": []
+                                },
+                                {
+                                    "name": "BrokenPiece8",
+                                    "children": []
+                                },
+                                {
+                                    "name": "BrokenPiece9",
+                                    "children": []
+                                },
+                                {
+                                    "name": "BrokenPiece10",
+                                    "children": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "PotionBottle_2",
+                    "children": [
+                        {
+                            "name": "LiquidParticle",
+                            "children": []
+                        },
+                        {
+                            "name": "Liquid",
+                            "children": []
+                        },
+                        {
+                            "name": "Glass",
+                            "children": []
+                        },
+                        {
+                            "name": "Plug",
+                            "children": []
+                        },
+                        {
+                            "name": "PotionPop",
+                            "children": []
+                        },
+                        {
+                            "name": "LiquidParticleSplash",
+                            "children": []
+                        },
+                        {
+                            "name": "potion_bottle_2_broken",
+                            "children": [
+                                {
+                                    "name": "BrokenPiece",
+                                    "children": []
+                                },
+                                {
+                                    "name": "BrokenPiece1",
+                                    "children": []
+                                },
+                                {
+                                    "name": "BrokenPiece2",
+                                    "children": []
+                                },
+                                {
+                                    "name": "BrokenPiece3",
+                                    "children": []
+                                },
+                                {
+                                    "name": "BrokenPiece4",
+                                    "children": []
+                                },
+                                {
+                                    "name": "BrokenPiece5",
+                                    "children": []
+                                },
+                                {
+                                    "name": "BrokenPiece6",
+                                    "children": []
+                                },
+                                {
+                                    "name": "BrokenPiece7",
+                                    "children": []
+                                },
+                                {
+                                    "name": "BrokenPiece8",
+                                    "children": []
+                                },
+                                {
+                                    "name": "BrokenPiece9",
+                                    "children": []
+                                },
+                                {
+                                    "name": "BrokenPiece10",
+                                    "children": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "PotionBottle_2",
+                    "children": [
+                        {
+                            "name": "LiquidParticle",
+                            "children": []
+                        },
+                        {
+                            "name": "Liquid",
+                            "children": []
+                        },
+                        {
+                            "name": "Glass",
+                            "children": []
+                        },
+                        {
+                            "name": "Plug",
+                            "children": []
+                        },
+                        {
+                            "name": "PotionPop",
+                            "children": []
+                        },
+                        {
+                            "name": "LiquidParticleSplash",
+                            "children": []
+                        },
+                        {
+                            "name": "potion_bottle_2_broken",
+                            "children": [
+                                {
+                                    "name": "BrokenPiece",
+                                    "children": []
+                                },
+                                {
+                                    "name": "BrokenPiece1",
+                                    "children": []
+                                },
+                                {
+                                    "name": "BrokenPiece2",
+                                    "children": []
+                                },
+                                {
+                                    "name": "BrokenPiece3",
+                                    "children": []
+                                },
+                                {
+                                    "name": "BrokenPiece4",
+                                    "children": []
+                                },
+                                {
+                                    "name": "BrokenPiece5",
+                                    "children": []
+                                },
+                                {
+                                    "name": "BrokenPiece6",
+                                    "children": []
+                                },
+                                {
+                                    "name": "BrokenPiece7",
+                                    "children": []
+                                },
+                                {
+                                    "name": "BrokenPiece8",
+                                    "children": []
+                                },
+                                {
+                                    "name": "BrokenPiece9",
+                                    "children": []
+                                },
+                                {
+                                    "name": "BrokenPiece10",
+                                    "children": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "PotionBottle_2",
+                    "children": [
+                        {
+                            "name": "LiquidParticle",
+                            "children": []
+                        },
+                        {
+                            "name": "Liquid",
+                            "children": []
+                        },
+                        {
+                            "name": "Glass",
+                            "children": []
+                        },
+                        {
+                            "name": "Plug",
+                            "children": []
+                        },
+                        {
+                            "name": "PotionPop",
+                            "children": []
+                        },
+                        {
+                            "name": "LiquidParticleSplash",
+                            "children": []
+                        },
+                        {
+                            "name": "potion_bottle_2_broken",
+                            "children": [
+                                {
+                                    "name": "BrokenPiece",
+                                    "children": []
+                                },
+                                {
+                                    "name": "BrokenPiece1",
+                                    "children": []
+                                },
+                                {
+                                    "name": "BrokenPiece2",
+                                    "children": []
+                                },
+                                {
+                                    "name": "BrokenPiece3",
+                                    "children": []
+                                },
+                                {
+                                    "name": "BrokenPiece4",
+                                    "children": []
+                                },
+                                {
+                                    "name": "BrokenPiece5",
+                                    "children": []
+                                },
+                                {
+                                    "name": "BrokenPiece6",
+                                    "children": []
+                                },
+                                {
+                                    "name": "BrokenPiece7",
+                                    "children": []
+                                },
+                                {
+                                    "name": "BrokenPiece8",
+                                    "children": []
+                                },
+                                {
+                                    "name": "BrokenPiece9",
+                                    "children": []
+                                },
+                                {
+                                    "name": "BrokenPiece10",
+                                    "children": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "PotionBottle_2",
+                    "children": [
+                        {
+                            "name": "LiquidParticle",
+                            "children": []
+                        },
+                        {
+                            "name": "Liquid",
+                            "children": []
+                        },
+                        {
+                            "name": "Glass",
+                            "children": []
+                        },
+                        {
+                            "name": "Plug",
+                            "children": []
+                        },
+                        {
+                            "name": "PotionPop",
+                            "children": []
+                        },
+                        {
+                            "name": "LiquidParticleSplash",
+                            "children": []
+                        },
+                        {
+                            "name": "potion_bottle_2_broken",
+                            "children": [
+                                {
+                                    "name": "BrokenPiece",
+                                    "children": []
+                                },
+                                {
+                                    "name": "BrokenPiece1",
+                                    "children": []
+                                },
+                                {
+                                    "name": "BrokenPiece2",
+                                    "children": []
+                                },
+                                {
+                                    "name": "BrokenPiece3",
+                                    "children": []
+                                },
+                                {
+                                    "name": "BrokenPiece4",
+                                    "children": []
+                                },
+                                {
+                                    "name": "BrokenPiece5",
+                                    "children": []
+                                },
+                                {
+                                    "name": "BrokenPiece6",
+                                    "children": []
+                                },
+                                {
+                                    "name": "BrokenPiece7",
+                                    "children": []
+                                },
+                                {
+                                    "name": "BrokenPiece8",
+                                    "children": []
+                                },
+                                {
+                                    "name": "BrokenPiece9",
+                                    "children": []
+                                },
+                                {
+                                    "name": "BrokenPiece10",
+                                    "children": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "PotionBottle_2",
+                    "children": [
+                        {
+                            "name": "LiquidParticle",
+                            "children": []
+                        },
+                        {
+                            "name": "Liquid",
+                            "children": []
+                        },
+                        {
+                            "name": "Glass",
+                            "children": []
+                        },
+                        {
+                            "name": "Plug",
+                            "children": []
+                        },
+                        {
+                            "name": "PotionPop",
+                            "children": []
+                        },
+                        {
+                            "name": "LiquidParticleSplash",
+                            "children": []
+                        },
+                        {
+                            "name": "potion_bottle_2_broken",
+                            "children": [
+                                {
+                                    "name": "BrokenPiece",
+                                    "children": []
+                                },
+                                {
+                                    "name": "BrokenPiece1",
+                                    "children": []
+                                },
+                                {
+                                    "name": "BrokenPiece2",
+                                    "children": []
+                                },
+                                {
+                                    "name": "BrokenPiece3",
+                                    "children": []
+                                },
+                                {
+                                    "name": "BrokenPiece4",
+                                    "children": []
+                                },
+                                {
+                                    "name": "BrokenPiece5",
+                                    "children": []
+                                },
+                                {
+                                    "name": "BrokenPiece6",
+                                    "children": []
+                                },
+                                {
+                                    "name": "BrokenPiece7",
+                                    "children": []
+                                },
+                                {
+                                    "name": "BrokenPiece8",
+                                    "children": []
+                                },
+                                {
+                                    "name": "BrokenPiece9",
+                                    "children": []
+                                },
+                                {
+                                    "name": "BrokenPiece10",
+                                    "children": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "PotionBottle_2",
+                    "children": [
+                        {
+                            "name": "LiquidParticle",
+                            "children": []
+                        },
+                        {
+                            "name": "Liquid",
+                            "children": []
+                        },
+                        {
+                            "name": "Glass",
+                            "children": []
+                        },
+                        {
+                            "name": "Plug",
+                            "children": []
+                        },
+                        {
+                            "name": "PotionPop",
+                            "children": []
+                        },
+                        {
+                            "name": "LiquidParticleSplash",
+                            "children": []
+                        },
+                        {
+                            "name": "potion_bottle_2_broken",
+                            "children": [
+                                {
+                                    "name": "BrokenPiece",
+                                    "children": []
+                                },
+                                {
+                                    "name": "BrokenPiece1",
+                                    "children": []
+                                },
+                                {
+                                    "name": "BrokenPiece2",
+                                    "children": []
+                                },
+                                {
+                                    "name": "BrokenPiece3",
+                                    "children": []
+                                },
+                                {
+                                    "name": "BrokenPiece4",
+                                    "children": []
+                                },
+                                {
+                                    "name": "BrokenPiece5",
+                                    "children": []
+                                },
+                                {
+                                    "name": "BrokenPiece6",
+                                    "children": []
+                                },
+                                {
+                                    "name": "BrokenPiece7",
+                                    "children": []
+                                },
+                                {
+                                    "name": "BrokenPiece8",
+                                    "children": []
+                                },
+                                {
+                                    "name": "BrokenPiece9",
+                                    "children": []
+                                },
+                                {
+                                    "name": "BrokenPiece10",
+                                    "children": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "PotionBottle_2",
+                    "children": [
+                        {
+                            "name": "LiquidParticle",
+                            "children": []
+                        },
+                        {
+                            "name": "Liquid",
+                            "children": []
+                        },
+                        {
+                            "name": "Glass",
+                            "children": []
+                        },
+                        {
+                            "name": "Plug",
+                            "children": []
+                        },
+                        {
+                            "name": "PotionPop",
+                            "children": []
+                        },
+                        {
+                            "name": "LiquidParticleSplash",
+                            "children": []
+                        },
+                        {
+                            "name": "potion_bottle_2_broken",
+                            "children": [
+                                {
+                                    "name": "BrokenPiece",
+                                    "children": []
+                                },
+                                {
+                                    "name": "BrokenPiece1",
+                                    "children": []
+                                },
+                                {
+                                    "name": "BrokenPiece2",
+                                    "children": []
+                                },
+                                {
+                                    "name": "BrokenPiece3",
+                                    "children": []
+                                },
+                                {
+                                    "name": "BrokenPiece4",
+                                    "children": []
+                                },
+                                {
+                                    "name": "BrokenPiece5",
+                                    "children": []
+                                },
+                                {
+                                    "name": "BrokenPiece6",
+                                    "children": []
+                                },
+                                {
+                                    "name": "BrokenPiece7",
+                                    "children": []
+                                },
+                                {
+                                    "name": "BrokenPiece8",
+                                    "children": []
+                                },
+                                {
+                                    "name": "BrokenPiece9",
+                                    "children": []
+                                },
+                                {
+                                    "name": "BrokenPiece10",
+                                    "children": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "PotionBottle_1",
+                    "children": [
+                        {
+                            "name": "LiquidParticle",
+                            "children": []
+                        },
+                        {
+                            "name": "Liquid",
+                            "children": []
+                        },
+                        {
+                            "name": "Plug",
+                            "children": [
+                                {
+                                    "name": "Anchor",
+                                    "children": []
+                                }
+                            ]
+                        },
+                        {
+                            "name": "Glass",
+                            "children": []
+                        },
+                        {
+                            "name": "PotionPop",
+                            "children": []
+                        },
+                        {
+                            "name": "LiquidParticleSplash",
+                            "children": []
+                        },
+                        {
+                            "name": "PotionBottleBroken1",
+                            "children": [
+                                {
+                                    "name": "BrokenPiece",
+                                    "children": []
+                                },
+                                {
+                                    "name": "BrokenPiece1",
+                                    "children": []
+                                },
+                                {
+                                    "name": "BrokenPiece2",
+                                    "children": []
+                                },
+                                {
+                                    "name": "BrokenPiece3",
+                                    "children": []
+                                },
+                                {
+                                    "name": "BrokenPiece4",
+                                    "children": []
+                                },
+                                {
+                                    "name": "BrokenPiece5",
+                                    "children": []
+                                },
+                                {
+                                    "name": "BrokenPiece6",
+                                    "children": []
+                                },
+                                {
+                                    "name": "BrokenPiece7",
+                                    "children": []
+                                },
+                                {
+                                    "name": "BrokenPiece8",
+                                    "children": []
+                                },
+                                {
+                                    "name": "BrokenPiece9",
+                                    "children": []
+                                },
+                                {
+                                    "name": "BrokenPiece10",
+                                    "children": []
+                                },
+                                {
+                                    "name": "BrokenPiece11",
+                                    "children": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "PotionBottle_1",
+                    "children": [
+                        {
+                            "name": "LiquidParticle",
+                            "children": []
+                        },
+                        {
+                            "name": "Liquid",
+                            "children": []
+                        },
+                        {
+                            "name": "Plug",
+                            "children": [
+                                {
+                                    "name": "Anchor",
+                                    "children": []
+                                }
+                            ]
+                        },
+                        {
+                            "name": "Glass",
+                            "children": []
+                        },
+                        {
+                            "name": "PotionPop",
+                            "children": []
+                        },
+                        {
+                            "name": "LiquidParticleSplash",
+                            "children": []
+                        },
+                        {
+                            "name": "PotionBottleBroken1",
+                            "children": [
+                                {
+                                    "name": "BrokenPiece",
+                                    "children": []
+                                },
+                                {
+                                    "name": "BrokenPiece1",
+                                    "children": []
+                                },
+                                {
+                                    "name": "BrokenPiece2",
+                                    "children": []
+                                },
+                                {
+                                    "name": "BrokenPiece3",
+                                    "children": []
+                                },
+                                {
+                                    "name": "BrokenPiece4",
+                                    "children": []
+                                },
+                                {
+                                    "name": "BrokenPiece5",
+                                    "children": []
+                                },
+                                {
+                                    "name": "BrokenPiece6",
+                                    "children": []
+                                },
+                                {
+                                    "name": "BrokenPiece7",
+                                    "children": []
+                                },
+                                {
+                                    "name": "BrokenPiece8",
+                                    "children": []
+                                },
+                                {
+                                    "name": "BrokenPiece9",
+                                    "children": []
+                                },
+                                {
+                                    "name": "BrokenPiece10",
+                                    "children": []
+                                },
+                                {
+                                    "name": "BrokenPiece11",
+                                    "children": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "PotionBottle_1",
+                    "children": [
+                        {
+                            "name": "LiquidParticle",
+                            "children": []
+                        },
+                        {
+                            "name": "Liquid",
+                            "children": []
+                        },
+                        {
+                            "name": "Plug",
+                            "children": [
+                                {
+                                    "name": "Anchor",
+                                    "children": []
+                                }
+                            ]
+                        },
+                        {
+                            "name": "Glass",
+                            "children": []
+                        },
+                        {
+                            "name": "PotionPop",
+                            "children": []
+                        },
+                        {
+                            "name": "LiquidParticleSplash",
+                            "children": []
+                        },
+                        {
+                            "name": "PotionBottleBroken1",
+                            "children": [
+                                {
+                                    "name": "BrokenPiece",
+                                    "children": []
+                                },
+                                {
+                                    "name": "BrokenPiece1",
+                                    "children": []
+                                },
+                                {
+                                    "name": "BrokenPiece2",
+                                    "children": []
+                                },
+                                {
+                                    "name": "BrokenPiece3",
+                                    "children": []
+                                },
+                                {
+                                    "name": "BrokenPiece4",
+                                    "children": []
+                                },
+                                {
+                                    "name": "BrokenPiece5",
+                                    "children": []
+                                },
+                                {
+                                    "name": "BrokenPiece6",
+                                    "children": []
+                                },
+                                {
+                                    "name": "BrokenPiece7",
+                                    "children": []
+                                },
+                                {
+                                    "name": "BrokenPiece8",
+                                    "children": []
+                                },
+                                {
+                                    "name": "BrokenPiece9",
+                                    "children": []
+                                },
+                                {
+                                    "name": "BrokenPiece10",
+                                    "children": []
+                                },
+                                {
+                                    "name": "BrokenPiece11",
+                                    "children": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "PotionBottle_1",
+                    "children": [
+                        {
+                            "name": "LiquidParticle",
+                            "children": []
+                        },
+                        {
+                            "name": "Liquid",
+                            "children": []
+                        },
+                        {
+                            "name": "Plug",
+                            "children": [
+                                {
+                                    "name": "Anchor",
+                                    "children": []
+                                }
+                            ]
+                        },
+                        {
+                            "name": "Glass",
+                            "children": []
+                        },
+                        {
+                            "name": "PotionPop",
+                            "children": []
+                        },
+                        {
+                            "name": "LiquidParticleSplash",
+                            "children": []
+                        },
+                        {
+                            "name": "PotionBottleBroken1",
+                            "children": [
+                                {
+                                    "name": "BrokenPiece",
+                                    "children": []
+                                },
+                                {
+                                    "name": "BrokenPiece1",
+                                    "children": []
+                                },
+                                {
+                                    "name": "BrokenPiece2",
+                                    "children": []
+                                },
+                                {
+                                    "name": "BrokenPiece3",
+                                    "children": []
+                                },
+                                {
+                                    "name": "BrokenPiece4",
+                                    "children": []
+                                },
+                                {
+                                    "name": "BrokenPiece5",
+                                    "children": []
+                                },
+                                {
+                                    "name": "BrokenPiece6",
+                                    "children": []
+                                },
+                                {
+                                    "name": "BrokenPiece7",
+                                    "children": []
+                                },
+                                {
+                                    "name": "BrokenPiece8",
+                                    "children": []
+                                },
+                                {
+                                    "name": "BrokenPiece9",
+                                    "children": []
+                                },
+                                {
+                                    "name": "BrokenPiece10",
+                                    "children": []
+                                },
+                                {
+                                    "name": "BrokenPiece11",
+                                    "children": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "PotionBottle_1",
+                    "children": [
+                        {
+                            "name": "LiquidParticle",
+                            "children": []
+                        },
+                        {
+                            "name": "Liquid",
+                            "children": []
+                        },
+                        {
+                            "name": "Plug",
+                            "children": [
+                                {
+                                    "name": "Anchor",
+                                    "children": []
+                                }
+                            ]
+                        },
+                        {
+                            "name": "Glass",
+                            "children": []
+                        },
+                        {
+                            "name": "PotionPop",
+                            "children": []
+                        },
+                        {
+                            "name": "LiquidParticleSplash",
+                            "children": []
+                        },
+                        {
+                            "name": "PotionBottleBroken1",
+                            "children": [
+                                {
+                                    "name": "BrokenPiece",
+                                    "children": []
+                                },
+                                {
+                                    "name": "BrokenPiece1",
+                                    "children": []
+                                },
+                                {
+                                    "name": "BrokenPiece2",
+                                    "children": []
+                                },
+                                {
+                                    "name": "BrokenPiece3",
+                                    "children": []
+                                },
+                                {
+                                    "name": "BrokenPiece4",
+                                    "children": []
+                                },
+                                {
+                                    "name": "BrokenPiece5",
+                                    "children": []
+                                },
+                                {
+                                    "name": "BrokenPiece6",
+                                    "children": []
+                                },
+                                {
+                                    "name": "BrokenPiece7",
+                                    "children": []
+                                },
+                                {
+                                    "name": "BrokenPiece8",
+                                    "children": []
+                                },
+                                {
+                                    "name": "BrokenPiece9",
+                                    "children": []
+                                },
+                                {
+                                    "name": "BrokenPiece10",
+                                    "children": []
+                                },
+                                {
+                                    "name": "BrokenPiece11",
+                                    "children": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "PotionBottle_1",
+                    "children": [
+                        {
+                            "name": "LiquidParticle",
+                            "children": []
+                        },
+                        {
+                            "name": "Liquid",
+                            "children": []
+                        },
+                        {
+                            "name": "Plug",
+                            "children": [
+                                {
+                                    "name": "Anchor",
+                                    "children": []
+                                }
+                            ]
+                        },
+                        {
+                            "name": "Glass",
+                            "children": []
+                        },
+                        {
+                            "name": "PotionPop",
+                            "children": []
+                        },
+                        {
+                            "name": "LiquidParticleSplash",
+                            "children": []
+                        },
+                        {
+                            "name": "PotionBottleBroken1",
+                            "children": [
+                                {
+                                    "name": "BrokenPiece",
+                                    "children": []
+                                },
+                                {
+                                    "name": "BrokenPiece1",
+                                    "children": []
+                                },
+                                {
+                                    "name": "BrokenPiece2",
+                                    "children": []
+                                },
+                                {
+                                    "name": "BrokenPiece3",
+                                    "children": []
+                                },
+                                {
+                                    "name": "BrokenPiece4",
+                                    "children": []
+                                },
+                                {
+                                    "name": "BrokenPiece5",
+                                    "children": []
+                                },
+                                {
+                                    "name": "BrokenPiece6",
+                                    "children": []
+                                },
+                                {
+                                    "name": "BrokenPiece7",
+                                    "children": []
+                                },
+                                {
+                                    "name": "BrokenPiece8",
+                                    "children": []
+                                },
+                                {
+                                    "name": "BrokenPiece9",
+                                    "children": []
+                                },
+                                {
+                                    "name": "BrokenPiece10",
+                                    "children": []
+                                },
+                                {
+                                    "name": "BrokenPiece11",
+                                    "children": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "PotionBottle_1",
+                    "children": [
+                        {
+                            "name": "LiquidParticle",
+                            "children": []
+                        },
+                        {
+                            "name": "Liquid",
+                            "children": []
+                        },
+                        {
+                            "name": "Plug",
+                            "children": [
+                                {
+                                    "name": "Anchor",
+                                    "children": []
+                                }
+                            ]
+                        },
+                        {
+                            "name": "Glass",
+                            "children": []
+                        },
+                        {
+                            "name": "PotionPop",
+                            "children": []
+                        },
+                        {
+                            "name": "LiquidParticleSplash",
+                            "children": []
+                        },
+                        {
+                            "name": "PotionBottleBroken1",
+                            "children": [
+                                {
+                                    "name": "BrokenPiece",
+                                    "children": []
+                                },
+                                {
+                                    "name": "BrokenPiece1",
+                                    "children": []
+                                },
+                                {
+                                    "name": "BrokenPiece2",
+                                    "children": []
+                                },
+                                {
+                                    "name": "BrokenPiece3",
+                                    "children": []
+                                },
+                                {
+                                    "name": "BrokenPiece4",
+                                    "children": []
+                                },
+                                {
+                                    "name": "BrokenPiece5",
+                                    "children": []
+                                },
+                                {
+                                    "name": "BrokenPiece6",
+                                    "children": []
+                                },
+                                {
+                                    "name": "BrokenPiece7",
+                                    "children": []
+                                },
+                                {
+                                    "name": "BrokenPiece8",
+                                    "children": []
+                                },
+                                {
+                                    "name": "BrokenPiece9",
+                                    "children": []
+                                },
+                                {
+                                    "name": "BrokenPiece10",
+                                    "children": []
+                                },
+                                {
+                                    "name": "BrokenPiece11",
+                                    "children": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "PotionBottle_1",
+                    "children": [
+                        {
+                            "name": "LiquidParticle",
+                            "children": []
+                        },
+                        {
+                            "name": "Liquid",
+                            "children": []
+                        },
+                        {
+                            "name": "Plug",
+                            "children": [
+                                {
+                                    "name": "Anchor",
+                                    "children": []
+                                }
+                            ]
+                        },
+                        {
+                            "name": "Glass",
+                            "children": []
+                        },
+                        {
+                            "name": "PotionPop",
+                            "children": []
+                        },
+                        {
+                            "name": "LiquidParticleSplash",
+                            "children": []
+                        },
+                        {
+                            "name": "PotionBottleBroken1",
+                            "children": [
+                                {
+                                    "name": "BrokenPiece",
+                                    "children": []
+                                },
+                                {
+                                    "name": "BrokenPiece1",
+                                    "children": []
+                                },
+                                {
+                                    "name": "BrokenPiece2",
+                                    "children": []
+                                },
+                                {
+                                    "name": "BrokenPiece3",
+                                    "children": []
+                                },
+                                {
+                                    "name": "BrokenPiece4",
+                                    "children": []
+                                },
+                                {
+                                    "name": "BrokenPiece5",
+                                    "children": []
+                                },
+                                {
+                                    "name": "BrokenPiece6",
+                                    "children": []
+                                },
+                                {
+                                    "name": "BrokenPiece7",
+                                    "children": []
+                                },
+                                {
+                                    "name": "BrokenPiece8",
+                                    "children": []
+                                },
+                                {
+                                    "name": "BrokenPiece9",
+                                    "children": []
+                                },
+                                {
+                                    "name": "BrokenPiece10",
+                                    "children": []
+                                },
+                                {
+                                    "name": "BrokenPiece11",
+                                    "children": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "PotionBottle_1",
+                    "children": [
+                        {
+                            "name": "LiquidParticle",
+                            "children": []
+                        },
+                        {
+                            "name": "Liquid",
+                            "children": []
+                        },
+                        {
+                            "name": "Plug",
+                            "children": [
+                                {
+                                    "name": "Anchor",
+                                    "children": []
+                                }
+                            ]
+                        },
+                        {
+                            "name": "Glass",
+                            "children": []
+                        },
+                        {
+                            "name": "PotionPop",
+                            "children": []
+                        },
+                        {
+                            "name": "LiquidParticleSplash",
+                            "children": []
+                        },
+                        {
+                            "name": "PotionBottleBroken1",
+                            "children": [
+                                {
+                                    "name": "BrokenPiece",
+                                    "children": []
+                                },
+                                {
+                                    "name": "BrokenPiece1",
+                                    "children": []
+                                },
+                                {
+                                    "name": "BrokenPiece2",
+                                    "children": []
+                                },
+                                {
+                                    "name": "BrokenPiece3",
+                                    "children": []
+                                },
+                                {
+                                    "name": "BrokenPiece4",
+                                    "children": []
+                                },
+                                {
+                                    "name": "BrokenPiece5",
+                                    "children": []
+                                },
+                                {
+                                    "name": "BrokenPiece6",
+                                    "children": []
+                                },
+                                {
+                                    "name": "BrokenPiece7",
+                                    "children": []
+                                },
+                                {
+                                    "name": "BrokenPiece8",
+                                    "children": []
+                                },
+                                {
+                                    "name": "BrokenPiece9",
+                                    "children": []
+                                },
+                                {
+                                    "name": "BrokenPiece10",
+                                    "children": []
+                                },
+                                {
+                                    "name": "BrokenPiece11",
+                                    "children": []
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Interior",
+            "children": [
+                {
+                    "name": "MetalPipes",
+                    "children": [
+                        {
+                            "name": "Pipe",
+                            "children": [
+                                {
+                                    "name": "Kitchen",
+                                    "children": [
+                                        {
+                                            "name": "Pipe",
+                                            "children": []
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "name": "Pipe (1)",
+                            "children": [
+                                {
+                                    "name": "Kitchen",
+                                    "children": [
+                                        {
+                                            "name": "Pipe",
+                                            "children": []
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "name": "Pipe (2)",
+                            "children": [
+                                {
+                                    "name": "Kitchen",
+                                    "children": [
+                                        {
+                                            "name": "Pipe",
+                                            "children": []
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "name": "Pipe (3)",
+                            "children": [
+                                {
+                                    "name": "Kitchen",
+                                    "children": [
+                                        {
+                                            "name": "Pipe",
+                                            "children": []
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "name": "Pipe (4)",
+                            "children": [
+                                {
+                                    "name": "Kitchen",
+                                    "children": [
+                                        {
+                                            "name": "Pipe",
+                                            "children": []
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "name": "Pipe (5)",
+                            "children": [
+                                {
+                                    "name": "Kitchen",
+                                    "children": [
+                                        {
+                                            "name": "Pipe",
+                                            "children": []
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "name": "Pipe (6)",
+                            "children": [
+                                {
+                                    "name": "Kitchen",
+                                    "children": [
+                                        {
+                                            "name": "Pipe",
+                                            "children": []
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "name": "Pipe (7)",
+                            "children": [
+                                {
+                                    "name": "Kitchen",
+                                    "children": [
+                                        {
+                                            "name": "Pipe",
+                                            "children": []
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "name": "Pipe (8)",
+                            "children": [
+                                {
+                                    "name": "Kitchen",
+                                    "children": [
+                                        {
+                                            "name": "Pipe",
+                                            "children": []
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "name": "Pipe (9)",
+                            "children": [
+                                {
+                                    "name": "Kitchen",
+                                    "children": [
+                                        {
+                                            "name": "Pipe",
+                                            "children": []
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "name": "Pipe (10)",
+                            "children": [
+                                {
+                                    "name": "Kitchen",
+                                    "children": [
+                                        {
+                                            "name": "Pipe",
+                                            "children": []
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "name": "Pipe (11)",
+                            "children": [
+                                {
+                                    "name": "Kitchen",
+                                    "children": [
+                                        {
+                                            "name": "Pipe",
+                                            "children": []
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "name": "Pipe (12)",
+                            "children": [
+                                {
+                                    "name": "Kitchen",
+                                    "children": [
+                                        {
+                                            "name": "Pipe",
+                                            "children": []
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "name": "Pipe (13)",
+                            "children": [
+                                {
+                                    "name": "Kitchen",
+                                    "children": [
+                                        {
+                                            "name": "Pipe",
+                                            "children": []
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "name": "Pipe (14)",
+                            "children": [
+                                {
+                                    "name": "Kitchen",
+                                    "children": [
+                                        {
+                                            "name": "Pipe",
+                                            "children": []
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "name": "Pipe (15)",
+                            "children": [
+                                {
+                                    "name": "Kitchen",
+                                    "children": [
+                                        {
+                                            "name": "Pipe",
+                                            "children": []
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "name": "Pipe (16)",
+                            "children": [
+                                {
+                                    "name": "Kitchen",
+                                    "children": [
+                                        {
+                                            "name": "Pipe",
+                                            "children": []
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "SpiderWebs",
+                    "children": [
+                        {
+                            "name": "SpiderWeb",
+                            "children": []
+                        },
+                        {
+                            "name": "SpiderWeb",
+                            "children": []
+                        },
+                        {
+                            "name": "SpiderWeb",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "name": "PumpkingPicture",
+                    "children": [
+                        {
+                            "name": "PumpkingPicture",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "name": "Pumpking",
+                    "children": []
+                },
+                {
+                    "name": "Painting1",
+                    "children": []
+                },
+                {
+                    "name": "Painting2",
+                    "children": []
+                },
+                {
+                    "name": "Painting3",
+                    "children": []
+                },
+                {
+                    "name": "Painting4",
+                    "children": []
+                },
+                {
+                    "name": "Shelf",
+                    "children": [
+                        {
+                            "name": "Shelf",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "name": "Shelf ",
+                    "children": [
+                        {
+                            "name": "Shelf",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "name": "Carpet",
+                    "children": [
+                        {
+                            "name": "Carpet",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "name": "WoodenLog (2)",
+                    "children": [
+                        {
+                            "name": "WoodenLog",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "name": "WoodenLog (1)",
+                    "children": [
+                        {
+                            "name": "WoodenLog",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "name": "WoodenLog",
+                    "children": [
+                        {
+                            "name": "WoodenLog",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "name": "WoodenLog (3)",
+                    "children": [
+                        {
+                            "name": "WoodenLog",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "name": "WoodenLog (4)",
+                    "children": [
+                        {
+                            "name": "WoodenLog",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "name": "WoodenLog (5)",
+                    "children": [
+                        {
+                            "name": "WoodenLog",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "name": "WoodenLog (6)",
+                    "children": [
+                        {
+                            "name": "WoodenLog",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "name": "WoodenLog (7)",
+                    "children": [
+                        {
+                            "name": "WoodenLog",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "name": "SpiderWeb (3)",
+                    "children": []
+                },
+                {
+                    "name": "Scarf",
+                    "children": []
+                },
+                {
+                    "name": "SpiderWeb (2)",
+                    "children": []
+                },
+                {
+                    "name": "SpiderWeb (1)",
+                    "children": []
+                },
+                {
+                    "name": "SpiderWeb",
+                    "children": []
+                },
+                {
+                    "name": "WitchHouse",
+                    "children": [
+                        {
+                            "name": "Lantern",
+                            "children": [
+                                {
+                                    "name": "Chain",
+                                    "children": []
+                                },
+                                {
+                                    "name": "Lantern_Base",
+                                    "children": []
+                                },
+                                {
+                                    "name": "QuadFlame",
+                                    "children": []
+                                }
+                            ]
+                        },
+                        {
+                            "name": "Lantern",
+                            "children": [
+                                {
+                                    "name": "Chain",
+                                    "children": []
+                                },
+                                {
+                                    "name": "Lantern_Base",
+                                    "children": []
+                                },
+                                {
+                                    "name": "QuadFlame",
+                                    "children": []
+                                }
+                            ]
+                        },
+                        {
+                            "name": "Lantern",
+                            "children": [
+                                {
+                                    "name": "Chain",
+                                    "children": []
+                                },
+                                {
+                                    "name": "Lantern_Base",
+                                    "children": []
+                                },
+                                {
+                                    "name": "QuadFlame",
+                                    "children": []
+                                }
+                            ]
+                        },
+                        {
+                            "name": "PaintingEye",
+                            "children": []
+                        },
+                        {
+                            "name": "FirePlace",
+                            "children": []
+                        },
+                        {
+                            "name": "WindowGlass",
+                            "children": []
+                        },
+                        {
+                            "name": "WindowGlass",
+                            "children": []
+                        },
+                        {
+                            "name": "WindowGlass",
+                            "children": []
+                        },
+                        {
+                            "name": "WindowGlass",
+                            "children": []
+                        },
+                        {
+                            "name": "WindowDoors",
+                            "children": []
+                        },
+                        {
+                            "name": "WindowDoors",
+                            "children": []
+                        },
+                        {
+                            "name": "WindowDoors",
+                            "children": []
+                        },
+                        {
+                            "name": "HouseInterior",
+                            "children": []
+                        },
+                        {
+                            "name": "WindowDoors",
+                            "children": []
+                        },
+                        {
+                            "name": "WindowGlass",
+                            "children": []
+                        },
+                        {
+                            "name": "WindowDoors",
+                            "children": []
+                        },
+                        {
+                            "name": "OutsideWindow6",
+                            "children": []
+                        },
+                        {
+                            "name": "WindowGlass",
+                            "children": []
+                        },
+                        {
+                            "name": "WindowFrame",
+                            "children": []
+                        },
+                        {
+                            "name": "WindowDoors",
+                            "children": []
+                        },
+                        {
+                            "name": "HouseExterior",
+                            "children": []
+                        },
+                        {
+                            "name": "WindowFrame",
+                            "children": []
+                        },
+                        {
+                            "name": "WindowDoors",
+                            "children": []
+                        },
+                        {
+                            "name": "Shelf",
+                            "children": []
+                        },
+                        {
+                            "name": "WindowDoors",
+                            "children": []
+                        },
+                        {
+                            "name": "WindowGlass",
+                            "children": []
+                        },
+                        {
+                            "name": "WindowFrame",
+                            "children": []
+                        },
+                        {
+                            "name": "Shelves",
+                            "children": []
+                        },
+                        {
+                            "name": "WindowFrame",
+                            "children": []
+                        },
+                        {
+                            "name": "WindowFrame",
+                            "children": []
+                        },
+                        {
+                            "name": "WindowFrame",
+                            "children": []
+                        },
+                        {
+                            "name": "Lantern",
+                            "children": [
+                                {
+                                    "name": "Chain",
+                                    "children": []
+                                },
+                                {
+                                    "name": "Lantern_Base",
+                                    "children": []
+                                },
+                                {
+                                    "name": "QuadFlame",
+                                    "children": []
+                                }
+                            ]
+                        },
+                        {
+                            "name": "AttachPoint",
+                            "children": []
+                        },
+                        {
+                            "name": "Lantern",
+                            "children": [
+                                {
+                                    "name": "Chain",
+                                    "children": []
+                                },
+                                {
+                                    "name": "Lantern_Base",
+                                    "children": []
+                                },
+                                {
+                                    "name": "QuadFlame",
+                                    "children": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "Totem",
+                    "children": [
+                        {
+                            "name": "Totem",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "name": "Floor",
+                    "children": []
+                },
+                {
+                    "name": "InstructionSheet",
+                    "children": []
+                },
+                {
+                    "name": "FireBoy",
+                    "children": [
+                        {
+                            "name": "FireBoy",
+                            "children": [
+                                {
+                                    "name": "FireSmokeBurst",
+                                    "children": []
+                                }
+                            ]
+                        },
+                        {
+                            "name": "Root",
+                            "children": [
+                                {
+                                    "name": "Body",
+                                    "children": [
+                                        {
+                                            "name": "Fire1_1",
+                                            "children": [
+                                                {
+                                                    "name": "Fire1_2",
+                                                    "children": [
+                                                        {
+                                                            "name": "Fire1_3",
+                                                            "children": [
+                                                                {
+                                                                    "name": "Fire1_4",
+                                                                    "children": [
+                                                                        {
+                                                                            "name": "Fire1_END",
+                                                                            "children": []
+                                                                        }
+                                                                    ]
+                                                                }
+                                                            ]
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "name": "Fire2_1",
+                                            "children": [
+                                                {
+                                                    "name": "Fire2_2",
+                                                    "children": [
+                                                        {
+                                                            "name": "Fire2_3",
+                                                            "children": [
+                                                                {
+                                                                    "name": "Fire2_4",
+                                                                    "children": [
+                                                                        {
+                                                                            "name": "Fire2_END",
+                                                                            "children": []
+                                                                        }
+                                                                    ]
+                                                                }
+                                                            ]
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "name": "Fire3_1",
+                                            "children": [
+                                                {
+                                                    "name": "Fire3_2",
+                                                    "children": [
+                                                        {
+                                                            "name": "Fire3_3",
+                                                            "children": [
+                                                                {
+                                                                    "name": "Fire3_4",
+                                                                    "children": [
+                                                                        {
+                                                                            "name": "Fire3_END1",
+                                                                            "children": []
+                                                                        }
+                                                                    ]
+                                                                },
+                                                                {
+                                                                    "name": "Fire3_5",
+                                                                    "children": [
+                                                                        {
+                                                                            "name": "Fire3_6",
+                                                                            "children": [
+                                                                                {
+                                                                                    "name": "Fire3_END2",
+                                                                                    "children": []
+                                                                                }
+                                                                            ]
+                                                                        }
+                                                                    ]
+                                                                }
+                                                            ]
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "name": "Fire4_1",
+                                            "children": [
+                                                {
+                                                    "name": "Fire4_2",
+                                                    "children": [
+                                                        {
+                                                            "name": "Fire4_3",
+                                                            "children": [
+                                                                {
+                                                                    "name": "Fire4_4",
+                                                                    "children": [
+                                                                        {
+                                                                            "name": "Fire4_END",
+                                                                            "children": []
+                                                                        }
+                                                                    ]
+                                                                }
+                                                            ]
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "name": "Fire5_1",
+                                            "children": [
+                                                {
+                                                    "name": "Fire5_2",
+                                                    "children": [
+                                                        {
+                                                            "name": "Fire5_3",
+                                                            "children": [
+                                                                {
+                                                                    "name": "Fire5_4",
+                                                                    "children": [
+                                                                        {
+                                                                            "name": "Fire5_END",
+                                                                            "children": []
+                                                                        }
+                                                                    ]
+                                                                }
+                                                            ]
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "name": "Fire6_1",
+                                            "children": [
+                                                {
+                                                    "name": "Fire6_2",
+                                                    "children": [
+                                                        {
+                                                            "name": "Fire6_3",
+                                                            "children": [
+                                                                {
+                                                                    "name": "Fire6_4",
+                                                                    "children": [
+                                                                        {
+                                                                            "name": "Fire6_5",
+                                                                            "children": [
+                                                                                {
+                                                                                    "name": "Fire6__END1",
+                                                                                    "children": []
+                                                                                }
+                                                                            ]
+                                                                        }
+                                                                    ]
+                                                                },
+                                                                {
+                                                                    "name": "Fire6_6",
+                                                                    "children": [
+                                                                        {
+                                                                            "name": "Fire6_END",
+                                                                            "children": []
+                                                                        }
+                                                                    ]
+                                                                }
+                                                            ]
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "name": "Fire7_1",
+                                            "children": [
+                                                {
+                                                    "name": "Fire7_2",
+                                                    "children": [
+                                                        {
+                                                            "name": "Fire7_3",
+                                                            "children": [
+                                                                {
+                                                                    "name": "Fire7_4",
+                                                                    "children": [
+                                                                        {
+                                                                            "name": "Fire7_END",
+                                                                            "children": []
+                                                                        }
+                                                                    ]
+                                                                }
+                                                            ]
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "name": "Fire8_1",
+                                            "children": [
+                                                {
+                                                    "name": "Fire8_2",
+                                                    "children": [
+                                                        {
+                                                            "name": "Fire8_3",
+                                                            "children": [
+                                                                {
+                                                                    "name": "Fire8_4",
+                                                                    "children": [
+                                                                        {
+                                                                            "name": "Fire8_END",
+                                                                            "children": []
+                                                                        }
+                                                                    ]
+                                                                }
+                                                            ]
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "name": "Left_Eye",
+                                            "children": []
+                                        },
+                                        {
+                                            "name": "Mouth",
+                                            "children": []
+                                        },
+                                        {
+                                            "name": "Right_Eye",
+                                            "children": []
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "name": "FireBoy",
+                            "children": []
+                        },
+                        {
+                            "name": "AmbientSound",
+                            "children": []
+                        },
+                        {
+                            "name": "DestroySound",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "name": "CauldronPipe",
+                    "children": [
+                        {
+                            "name": "CauldronPipe",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "name": "BookHolder",
+                    "children": [
+                        {
+                            "name": "BookHolder",
+                            "children": [
+                                {
+                                    "name": "Socket",
+                                    "children": []
+                                },
+                                {
+                                    "name": "Audio Source",
+                                    "children": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "Chest",
+                    "children": [
+                        {
+                            "name": "Chest_Lid",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "name": "Wardrobe",
+                    "children": [
+                        {
+                            "name": "WardrobeBase",
+                            "children": []
+                        },
+                        {
+                            "name": "WardrobeBaseDoor",
+                            "children": []
+                        },
+                        {
+                            "name": "WardrobeTop",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "name": "CaudronFlush",
+                    "children": [
+                        {
+                            "name": "GameObject",
+                            "children": []
+                        },
+                        {
+                            "name": "CauldronFlushTerminal",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "name": "ExitDoor",
+                    "children": [
+                        {
+                            "name": "ExitDoor",
+                            "children": [
+                                {
+                                    "name": "Glass",
+                                    "children": []
+                                },
+                                {
+                                    "name": "ExitDoorParticle",
+                                    "children": []
+                                },
+                                {
+                                    "name": "DoorLock",
+                                    "children": [
+                                        {
+                                            "name": "DoorLock",
+                                            "children": [
+                                                {
+                                                    "name": "PotionReceiver",
+                                                    "children": []
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name": "AmbientNoiseSource",
+                                    "children": []
+                                },
+                                {
+                                    "name": "LockSymbol",
+                                    "children": []
+                                },
+                                {
+                                    "name": "OpenSource",
+                                    "children": []
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Exterior",
+            "children": [
+                {
+                    "name": "Trees",
+                    "children": [
+                        {
+                            "name": "Tree2",
+                            "children": []
+                        },
+                        {
+                            "name": "Tree3",
+                            "children": []
+                        },
+                        {
+                            "name": "Tree4",
+                            "children": []
+                        },
+                        {
+                            "name": "Tree5",
+                            "children": []
+                        },
+                        {
+                            "name": "Tree7",
+                            "children": []
+                        },
+                        {
+                            "name": "Tree9",
+                            "children": []
+                        },
+                        {
+                            "name": "Tree11",
+                            "children": []
+                        },
+                        {
+                            "name": "Tree13",
+                            "children": []
+                        },
+                        {
+                            "name": "Tree15",
+                            "children": []
+                        },
+                        {
+                            "name": "Tree16",
+                            "children": []
+                        },
+                        {
+                            "name": "Tree19",
+                            "children": []
+                        },
+                        {
+                            "name": "Tree21",
+                            "children": []
+                        },
+                        {
+                            "name": "Tree23",
+                            "children": []
+                        },
+                        {
+                            "name": "Tree25",
+                            "children": []
+                        },
+                        {
+                            "name": "Tree27",
+                            "children": []
+                        },
+                        {
+                            "name": "Tree32",
+                            "children": []
+                        },
+                        {
+                            "name": "Tree34",
+                            "children": []
+                        },
+                        {
+                            "name": "Tree35",
+                            "children": []
+                        },
+                        {
+                            "name": "Tree52",
+                            "children": []
+                        },
+                        {
+                            "name": "Tree53",
+                            "children": []
+                        },
+                        {
+                            "name": "Tree57",
+                            "children": []
+                        },
+                        {
+                            "name": "Tree58",
+                            "children": []
+                        },
+                        {
+                            "name": "Tree60",
+                            "children": []
+                        },
+                        {
+                            "name": "Tree61",
+                            "children": []
+                        },
+                        {
+                            "name": "Tree62",
+                            "children": []
+                        },
+                        {
+                            "name": "Tree63",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "name": "OutdoorShack",
+                    "children": [
+                        {
+                            "name": "ExteriorShack",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "name": "Planet",
+                    "children": [
+                        {
+                            "name": "Watermelon",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "name": "Fences",
+                    "children": [
+                        {
+                            "name": "Fence7",
+                            "children": []
+                        },
+                        {
+                            "name": "Fence8",
+                            "children": []
+                        },
+                        {
+                            "name": "Fence9",
+                            "children": []
+                        },
+                        {
+                            "name": "Fence10",
+                            "children": []
+                        },
+                        {
+                            "name": "Fence11",
+                            "children": []
+                        },
+                        {
+                            "name": "Fence12",
+                            "children": []
+                        },
+                        {
+                            "name": "Fence13",
+                            "children": []
+                        },
+                        {
+                            "name": "Fence14",
+                            "children": []
+                        },
+                        {
+                            "name": "Fence15",
+                            "children": []
+                        },
+                        {
+                            "name": "Fence16",
+                            "children": []
+                        },
+                        {
+                            "name": "Fence17",
+                            "children": []
+                        },
+                        {
+                            "name": "Fence18",
+                            "children": []
+                        },
+                        {
+                            "name": "Fence19",
+                            "children": []
+                        },
+                        {
+                            "name": "Fence20",
+                            "children": []
+                        },
+                        {
+                            "name": "Fence21",
+                            "children": []
+                        },
+                        {
+                            "name": "Fence22",
+                            "children": []
+                        },
+                        {
+                            "name": "Fence23",
+                            "children": []
+                        },
+                        {
+                            "name": "Fence24",
+                            "children": []
+                        },
+                        {
+                            "name": "Fence25",
+                            "children": []
+                        },
+                        {
+                            "name": "Fence26",
+                            "children": []
+                        },
+                        {
+                            "name": "Fence27",
+                            "children": []
+                        },
+                        {
+                            "name": "Fence28",
+                            "children": []
+                        },
+                        {
+                            "name": "Fence29",
+                            "children": []
+                        },
+                        {
+                            "name": "Fence30",
+                            "children": []
+                        },
+                        {
+                            "name": "Fence31",
+                            "children": []
+                        },
+                        {
+                            "name": "Fence32",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
