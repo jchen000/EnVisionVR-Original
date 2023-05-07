@@ -1,134 +1,113 @@
-using System.Collections.Generic;
-using System.IO;
-using UnityEditor;
 using UnityEngine;
-using UnityEngine.SceneManagement;
+using UnityEditor;
+using Newtonsoft.Json;
+using System.Collections.Generic;
 
-public class SceneGraphExtractor : MonoBehaviour
+public class SceneGraphExporter : EditorWindow
 {
-    [MenuItem("Scene Graph/Print Scene Graph")]
-    public static void PrintSceneGraph()
+    [MenuItem("Window/Export Scene Graph")]
+    private static void ExportSceneGraph()
     {
-        Debug.Log("Scene Graph:");
-        PrintGameObjectHierarchy(SceneManager.GetActiveScene().GetRootGameObjects(), 0);
-    }
+        // Get the current scene
+        UnityEngine.SceneManagement.Scene scene = UnityEditor.SceneManagement.EditorSceneManager.GetActiveScene();
 
-    [MenuItem("Scene Graph/Export Scene Graph to JSON")]
-    public static void ExportSceneGraphToJson()
-    {
-        // Get the active scene
-        Scene scene = SceneManager.GetActiveScene();
+        // Create a dictionary to store the scene graph
+        Dictionary<string, object> sceneGraph = new Dictionary<string, object>();
+        sceneGraph["name"] = scene.name;
+        sceneGraph["type"] = "Scene";
+        sceneGraph["children"] = GetChildren(scene.GetRootGameObjects());
 
-        // Extract the hierarchy of game objects
-        List<GameObjectInfo> gameObjects = new List<GameObjectInfo>();
-        foreach (GameObject rootGameObject in scene.GetRootGameObjects())
+        // Convert the scene graph to JSON
+        string json = JsonConvert.SerializeObject(sceneGraph, Formatting.Indented);
+
+        // Save the JSON to a file
+        string outputPath = EditorUtility.SaveFilePanel("Export Scene Graph", "", "scene_graph.json", "json");
+        if (!string.IsNullOrEmpty(outputPath))
         {
-            gameObjects.Add(ExtractGameObjectInfo(rootGameObject));
+            System.IO.File.WriteAllText(outputPath, json);
+            Debug.Log("Scene graph exported to: " + outputPath);
         }
-
-        // Serialize the scene graph data as JSON using JsonUtility
-        string json = JsonUtility.ToJson(new SceneGraph(scene.name, gameObjects), true);
-
-        // Write the JSON data to a file
-        string outputPath = Path.Combine(Application.dataPath, "scene-graph.json");
-        File.WriteAllText(outputPath, json);
-
-        Debug.Log("Scene graph saved to " + outputPath);
     }
 
-    private static void PrintGameObjectHierarchy(GameObject[] gameObjects, int depth)
+    private static List<object> GetChildren(GameObject[] gameObjects)
     {
+        List<object> children = new List<object>();
+
         foreach (GameObject gameObject in gameObjects)
         {
-            Debug.Log(new string('\t', depth) + gameObject.name);
+            Dictionary<string, object> child = new Dictionary<string, object>();
+            child["name"] = gameObject.name;
+            child["type"] = "GameObject";
+            child["components"] = GetComponentData(gameObject);
 
-            // Recursively print the child game objects
-            PrintGameObjectHierarchy(GetChildGameObjects(gameObject), depth + 1);
+            // Get children recursively
+            Transform transform = gameObject.transform;
+            if (transform.childCount > 0)
+                child["children"] = GetChildren(GetChildGameObjects(transform));
+
+            children.Add(child);
         }
+
+        return children;
     }
 
-    private static GameObject[] GetChildGameObjects(GameObject gameObject)
+    private static List<object> GetComponentData(GameObject gameObject)
     {
-        Transform[] childTransforms = gameObject.GetComponentsInChildren<Transform>();
-        GameObject[] childGameObjects = new GameObject[childTransforms.Length - 1];
-        for (int i = 1; i < childTransforms.Length; i++)
+        List<object> componentData = new List<object>();
+
+        Component[] components = gameObject.GetComponents<Component>();
+        foreach (Component component in components)
         {
-            childGameObjects[i - 1] = childTransforms[i].gameObject;
+            Dictionary<string, object> data = new Dictionary<string, object>();
+            data["type"] = component.GetType().ToString();
+
+            // Get serialized data
+            SerializedObject serializedObject = new SerializedObject(component);
+            SerializedProperty serializedProperty = serializedObject.GetIterator();
+            while (serializedProperty.NextVisible(true))
+            {
+                if (serializedProperty.name == "m_Script")
+                    continue;
+
+                data[serializedProperty.name] = GetValue(serializedProperty);
+            }
+
+            componentData.Add(data);
         }
+
+        return componentData;
+    }
+
+    private static GameObject[] GetChildGameObjects(Transform transform)
+    {
+        GameObject[] childGameObjects = new GameObject[transform.childCount];
+
+        for (int i = 0; i < transform.childCount; i++)
+        {
+            childGameObjects[i] = transform.GetChild(i).gameObject;
+        }
+
         return childGameObjects;
     }
 
-    private static GameObjectInfo ExtractGameObjectInfo(GameObject gameObject)
+    private static object GetValue(SerializedProperty property)
     {
-        List<ComponentInfo> componentInfos = new List<ComponentInfo>();
-        foreach (Component component in gameObject.GetComponents<Component>())
+        switch (property.propertyType)
         {
-            componentInfos.Add(new ComponentInfo(component.GetType().ToString(), GetSerializedData(component)));
+            case SerializedPropertyType.Integer:
+                return property.intValue;
+            case SerializedPropertyType.Boolean:
+                return property.boolValue;
+            case SerializedPropertyType.Float:
+                return property.floatValue;
+            case SerializedPropertyType.String:
+                return property.stringValue;
+            case SerializedPropertyType.ObjectReference:
+                return property.objectReferenceValue != null ? property.objectReferenceValue.name : "null";
+            case SerializedPropertyType.Enum:
+                return property.enumNames[property.enumValueIndex];
+            default:
+                return null;
         }
-
-        List<GameObjectInfo> childGameObjectInfos = new List<GameObjectInfo>();
-        foreach (GameObject childGameObject in GetChildGameObjects(gameObject))
-        {
-            childGameObjectInfos.Add(ExtractGameObjectInfo(childGameObject));
-        }
-
-        return new GameObjectInfo(gameObject.name, componentInfos.ToArray(), childGameObjectInfos.ToArray());
-    }
-
-    private static string GetSerializedData(Component component)
-    {
-        SerializedObject serializedObject = new SerializedObject(component);
-        SerializedProperty serializedProperty = serializedObject.GetIterator();
-        serializedProperty.Next(true);
-        while (serializedProperty.Next(false))
-        {
-            if (serializedProperty.propertyType == SerializedPropertyType.ObjectReference)
-            {
-                serializedProperty.objectReferenceValue = null;
-            }
-        }
-        return serializedObject.ToString();
-    }
-
-    [System.Serializable]
-    private class SceneGraph
-    {
-        public string sceneName;
-        public GameObjectInfo[] gameObjects;
-
-        public SceneGraph(string sceneName, List<GameObjectInfo> gameObjects)
-        {
-            this.sceneName = sceneName;
-            this.gameObjects = gameObjects.ToArray();
     }
 }
-
-[System.Serializable]
-private class GameObjectInfo
-{
-    public string name;
-    public ComponentInfo[] components;
-    public GameObjectInfo[] children;
-
-    public GameObjectInfo(string name, ComponentInfo[] components, GameObjectInfo[] children)
-    {
-        this.name = name;
-        this.components = components;
-        this.children = children;
-    }
-}
-
-[System.Serializable]
-private class ComponentInfo
-{
-    public string type;
-    public string serializedData;
-
-    public ComponentInfo(string type, string serializedData)
-    {
-        this.type = type;
-        this.serializedData = serializedData;
-    }
-}
-}
-
