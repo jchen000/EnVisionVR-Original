@@ -3,18 +3,31 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using Newtonsoft.Json;
+using Microsoft.CognitiveServices.Speech;
+using Microsoft.CognitiveServices.Speech.Audio;
+using System.Threading.Tasks;
 
 public class CameraFieldOfView : MonoBehaviour
 {
     Camera mainCamera;
     Dictionary<string, float> importanceValues;
+    SpeechSynthesizer synthesizer;
 
     void Start()
     {
-        mainCamera = Camera.main; // Assign the main camera in the scene to mainCamera
-
-        // Load the importance values from the JSON file
+        mainCamera = Camera.main;
         LoadImportanceValues();
+
+        // Create SpeechConfig instance
+        SpeechConfig speechConfig = SpeechConfig.FromSubscription("4de1d19d8bfe4fae9f46a2a3e848d548", "uksouth");
+
+        // Create SpeechSynthesizer instance
+        synthesizer = new SpeechSynthesizer(speechConfig);
+    }
+
+    void OnDestroy()
+    {
+        synthesizer?.Dispose();
     }
 
     void Update()
@@ -63,13 +76,116 @@ public class CameraFieldOfView : MonoBehaviour
         for (int i = 0; i < Mathf.Min(3, objectsInFieldOfView.Count); i++)
         {
             GameObject obj = objectsInFieldOfView[i];
-            if (GetImportanceValue(obj.name)>0)
+            if (GetImportanceValue(obj.name) > 0)
             {
-            Debug.Log(obj.name + " is within the field of view. Position: " + obj.transform.position + "Importance:" + GetImportanceValue(obj.name));
+                string message = obj.name;
+                string messageFull = obj.name + " is within the field of view. Position: " + obj.transform.position + " Importance: " + GetImportanceValue(obj.name);
+                Debug.Log(messageFull);
+                SpeakText(message);
             }
         }
     }
 
+    async void SpeakText(string text)
+    {
+        await synthesizer.SpeakTextAsync(text);
+        // using (var result = await synthesizer.SpeakTextAsync(text))
+        // {
+        //     if (result.Reason == ResultReason.SynthesizingAudioCompleted)
+        //     {
+        //         await SaveAudioToWaveFile(result.AudioData, "audio.wav");
+        //         PlayAudioFromFile("audio.wav");
+        //     }
+        //     else if (result.Reason == ResultReason.Canceled)
+        //     {
+        //         var cancellation = SpeechSynthesisCancellationDetails.FromResult(result);
+        //         Debug.LogError($"Speech synthesis canceled: {cancellation.Reason}");
+
+        //         if (cancellation.Reason == CancellationReason.Error)
+        //         {
+        //             Debug.LogError($"Error details: {cancellation.ErrorDetails}");
+        //         }
+        //     }
+        // }
+    }
+
+    // async Task SaveAudioToWaveFile(AudioData audioData, string filePath)
+    // {
+    //     using (var fileStream = new FileStream(filePath, FileMode.Create, FileAccess.Write))
+    //     {
+    //         await audioData.WriteToWaveStreamAsync(fileStream);
+    //     }
+    // }
+
+    // void PlayAudioFromFile(string filePath)
+    // {
+    //     if (File.Exists(filePath))
+    //     {
+    //         StartCoroutine(PlayAudioClipCoroutine(filePath));
+    //     }
+    //     else
+    //     {
+    //         Debug.LogError("Audio file not found: " + filePath);
+    //     }
+    // }
+
+    // IEnumerator<YieldInstruction> PlayAudioClipCoroutine(string filePath)
+    // {
+    //     using (var fileStream = new FileStream(filePath, FileMode.Open, FileAccess.Read))
+    //     {
+    //         var audioClip = CreateAudioClipFromWaveStream(fileStream);
+    //         if (audioClip != null)
+    //         {
+    //             var audioSource = gameObject.AddComponent<AudioSource>();
+    //             audioSource.clip = audioClip;
+    //             audioSource.Play();
+
+    //             yield return new WaitForSeconds(audioClip.length);
+
+    //             audioSource.Stop();
+    //             Destroy(audioSource);
+    //         }
+    //     }
+    // }
+
+    // AudioClip CreateAudioClipFromWaveStream(Stream waveStream)
+    // {
+    //     byte[] waveBytes = new byte[waveStream.Length];
+    //     waveStream.Read(waveBytes, 0, waveBytes.Length);
+
+    //     AudioClip audioClip = WavUtility.ToAudioClip(waveBytes, 0, waveBytes.Length, 0);
+    //     return audioClip;
+    // }
+
+    // Simple WavUtility class to convert audio data to AudioClip
+    // public static class WavUtility
+    // {
+    //     public static AudioClip ToAudioClip(byte[] wavData)
+    //     {
+    //         // Convert audio data to float array
+    //         float[] floatData = ConvertByteArrayToFloatArray(wavData);
+
+    //         // Create an AudioClip from float data
+    //         AudioClip clip = AudioClip.Create("GeneratedAudio", floatData.Length, 1, 16000, false);
+    //         clip.SetData(floatData, 0);
+
+    //         return clip;
+    //     }
+
+    //     private static float[] ConvertByteArrayToFloatArray(byte[] byteArray)
+    //     {
+    //         // Convert byte array to float array
+    //         float[] floatArray = new float[byteArray.Length / 2];
+    //         for (int i = 0; i < floatArray.Length; i++)
+    //         {
+    //             floatArray[i] = (float)(System.BitConverter.ToInt16(byteArray, i * 2)) / 32768.0f;
+    //         }
+    //         return floatArray;
+    //     }
+    // }
+
+    
+    
     bool IsObjectVisible(Vector3 objectPosition, Vector3 cameraPosition, Quaternion cameraRotation, float fieldOfView)
     {
         // Calculate the direction from the camera to the object
