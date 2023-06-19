@@ -61,15 +61,25 @@ public class SceneGraphExporter : EditorWindow
             Dictionary<string, object> data = new Dictionary<string, object>();
             data["type"] = component.GetType().ToString();
 
-            // Get serialized data
-            SerializedObject serializedObject = new SerializedObject(component);
-            SerializedProperty serializedProperty = serializedObject.GetIterator();
-            while (serializedProperty.NextVisible(true))
+            if (component is Transform)
             {
-                if (serializedProperty.name == "m_Script")
-                    continue;
+                Transform transform = (Transform)component;
+                data["position"] = GetVector3Data(transform.position);
+                data["rotation"] = GetVector3Data(transform.rotation.eulerAngles);
+                data["scale"] = GetVector3Data(transform.localScale);
+            }
+            else
+            {
+                // Get serialized data
+                SerializedObject serializedObject = new SerializedObject(component);
+                SerializedProperty serializedProperty = serializedObject.GetIterator();
+                while (serializedProperty.NextVisible(true))
+                {
+                    if (serializedProperty.name == "m_Script")
+                        continue;
 
-                data[serializedProperty.name] = GetValue(serializedProperty);
+                    data[serializedProperty.name] = GetValue(serializedProperty);
+                }
             }
 
             componentData.Add(data);
@@ -109,5 +119,14 @@ public class SceneGraphExporter : EditorWindow
             default:
                 return null;
         }
+    }
+    
+    private static Dictionary<string, float> GetVector3Data(Vector3 vector)
+    {
+        Dictionary<string, float> data = new Dictionary<string, float>();
+        data["x"] = vector.x;
+        data["y"] = vector.y;
+        data["z"] = vector.z;
+        return data;
     }
 }

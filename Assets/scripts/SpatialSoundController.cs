@@ -21,7 +21,8 @@ public class SpatialSoundController : MonoBehaviour
     public void PlayAudioClip(string audioClipName, Vector3 position)
     {
         // Load the audio clip from the specified file path
-        string audioFilePath = "Super Power Achieved"; // Update with the actual audio clip file name
+        // string audioFilePath = "Sweet Notification"; // Update with the actual audio clip file name
+        string audioFilePath = audioClipName;
         AudioClip audioClip = Resources.Load<AudioClip>(audioFilePath);
 
         if (audioClip != null)
@@ -43,7 +44,7 @@ public class SpatialSoundController : MonoBehaviour
             audioSourceInstance.Play();
 
             // Destroy the game object after the audio clip has finished playing
-            Destroy(audioSourceObject, audioClip.length);
+            //Destroy(audioSourceObject, audioClip.length);
         }
         else
         {

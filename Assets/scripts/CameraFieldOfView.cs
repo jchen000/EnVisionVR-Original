@@ -7,6 +7,7 @@ using Microsoft.CognitiveServices.Speech;
 using Microsoft.CognitiveServices.Speech.Audio;
 using System.Threading.Tasks;
 using System.Collections;
+using UnityEngine.XR.Interaction.Toolkit;
 
 public class CameraFieldOfView : MonoBehaviour
 {
@@ -15,16 +16,34 @@ public class CameraFieldOfView : MonoBehaviour
     // private SpeechSynthesizer synthesizer;
     SpeechSynthesizer synthesizer;
     private AudioSource audioSource;
+    public bool localizationMode = false;  
     // private AudioSource audioSource;
     public float volume = 1f;
     public float spatialBlend = 1f;
     private SpatialSoundController soundController;
+    private RepeatingSoundPlayer soundPlayer;
+    // Add a private variable to store the most recently spoken object
+    private GameObject recentlySpokenObject;
+
+    public XRController rightHand;
+    public InputHelpers.Button primaryButton;
+    public InputHelpers.Button secondaryButton;
+    public InputHelpers.Button triggerButton;
+    public bool primaryButtonDown;
+    public bool secondaryButtonDown;
+    public bool triggerButtonDown;
+    //private bool prevTriggerButtonState_ = false;
+    //private RepeatingSoundPlayer repeatingSoundPlayer;
+    private float timer = 0f; // Timer to track the elapsed time
+    //ButtonCheckFieldOfView buttoncheckfieldofview;
 
 
     void Start()
     {
         mainCamera = Camera.main;
         LoadImportanceValues();
+
+        //buttoncheckfieldofview = GetComponent<ButtonCheckFieldOfView>();
 
         // Create SpeechConfig instance
         SpeechConfig speechConfig = SpeechConfig.FromSubscription("4de1d19d8bfe4fae9f46a2a3e848d548", "uksouth");
@@ -36,13 +55,38 @@ public class CameraFieldOfView : MonoBehaviour
         audioSource = GetComponent<AudioSource>();
 
         soundController = GetComponent<SpatialSoundController>();
+
+        //soundPlayer = GetComponent<RepeatingSoundPlayer>();
+        soundPlayer = GameObject.Find("BeepAudioSource").GetComponent<RepeatingSoundPlayer>();
+
+
+        //repeatingSoundPlayer = GetComponent<RepeatingSoundPlayer>();
+
     }
 
-    void Update()
+    async void Update()
     {
-        // Update any other logic or behavior here
+        // Check if the button on the right hand controller is pressed
+        primaryButtonDown = false;//OVRInput.Get(OVRInput.Button.One);
+        rightHand.inputDevice.IsPressed(primaryButton, out primaryButtonDown);
+        secondaryButtonDown= false;
+        rightHand.inputDevice.IsPressed(secondaryButton, out secondaryButtonDown);
+        triggerButtonDown = false;
+        rightHand.inputDevice.IsPressed(triggerButton, out triggerButtonDown);
+        
+        if (secondaryButtonDown)
+        {
+            Debug.Log("Secondary Button Pressed!");
+        }
+        //if (triggerButtonDown && !prevTriggerButtonState_)
+        //{
+        //    Debug.Log("Trigger Button Pressed!");
+        //}
+        //Debug.Log(objectButtonDown);
+
+        //prevTriggerButtonState_ = triggerButtonDown;
     }
-    
+
     public async void CheckObjectsInFieldOfView()
     {
         if (mainCamera == null)
@@ -79,81 +123,99 @@ public class CameraFieldOfView : MonoBehaviour
 
         // Sort the objects based on the new importance values
         objectsInFieldOfView.Sort((a, b) => GetImportanceValue(b.name).CompareTo(GetImportanceValue(a.name)));
-        
-        // // Print the three objects with the highest new importance values
-        // for (int i = 0; i < Mathf.Min(3, objectsInFieldOfView.Count); i++)
-        // {
-        //     GameObject obj = objectsInFieldOfView[i];
-        //     if (GetImportanceValue(obj.name) > 0)
-        //     {
-        //         string message = obj.name;
-        //         string messageFull = obj.name + " is within the field of view. Position: " + obj.transform.position + " Importance: " + GetImportanceValue(obj.name);
-        //         Debug.Log(messageFull);
 
-        //         // SynthesizeText(message);
-        //         // var result = SpeakText(message);
-        //         SpeakText(message);
-
-        //         // Get or add the SpatialSoundController component to the object
-        //         SpatialSoundController soundController = obj.GetComponent<SpatialSoundController>();
-        //         if (soundController == null)
-        //             soundController = obj.AddComponent<SpatialSoundController>();
-
-        //         // Play the audio clip at the object's position
-        //         soundController.PlayAudioClip("Super Power Achieved", obj.transform.position);
-
-        //         // Play the audio after a short delay
-        //         float delay = 3.0f; // Adjust the delay time as needed
-        //         StartCoroutine(PlayAudioClipWithDelay(soundController, "Super Power Achieved", objectsInFieldOfView[i].transform.position, delay));
-        //         string objname = objectsInFieldOfView[i].name;
-        //         Debug.Log("Sound of " + objname);
-        //     }
-        // }
         // Print the three objects with the highest new importance values
         for (int i = 0; i < Mathf.Min(3, objectsInFieldOfView.Count); i++)
         {
             GameObject obj = objectsInFieldOfView[i];
-            if (GetImportanceValue(obj.name) > 0)
+            if (GetImportanceValue(obj.name) > 0 && localizationMode==false)
             {
                 string message = obj.name;
                 string messageFull = obj.name + " is within the field of view. Position: " + obj.transform.position + " Importance: " + GetImportanceValue(obj.name);
                 Debug.Log(messageFull);
-                // SynthesizeText(message);
-                // var result = SpeakText(message);
                 SpeakText(message);
-                // Get or add the SpatialSoundController component to the object
-                // SpatialSoundController soundController = obj.GetComponent<SpatialSoundController>();
-                // if (soundController == null)
-                //     soundController = obj.AddComponent<SpatialSoundController>();
+
+                // Store the most recently spoken object
+                recentlySpokenObject = obj;
                 
                 // Delay before playing the audio clip
                 float delay = 2.0f; // Adjust the delay time as needed
                 await Task.Delay((int)(delay * 800));
 
                 // Play the audio clip at the object's position
-                soundController.PlayAudioClip("Super Power Achieved", obj.transform.position);
+                soundController.PlayAudioClip("Sweet Notification", obj.transform.position);
         
-                // float delay = 3.0f; // Adjust the delay time as needed
-                // yield return new WaitForSeconds(delay);
-                // Play the audio clip at the object's position
-                // soundController.PlayAudioClip("Super Power Achieved", objectsInFieldOfView[i].transform.position);
-                // PlayAudioClipWithDelay(soundController, "Super Power Achieved", objectsInFieldOfView[i].transform.position, delay);
                 string objname = objectsInFieldOfView[i].name;
                 Debug.Log("Sound of " + objname);
 
-                await Task.Delay((int)(delay * 800));
+                await Task.Delay((int)(delay * 500));
+
+                // Check if the button on the right hand controller is pressed
+                //objectButtonDown = OVRInput.Get(OVRInput.Button.Two);
+                //Debug.Log("OVRInput.Get Object Button state: " + objectButtonDown);
+
+                //rightHand.inputDevice.IsPressed(objectButton, out objectButtonDown);
+                //Debug.Log("rightHand.inputDevice Object Button state: " + objectButtonDown);
+
+                //rightHand.inputDevice.IsPressed(objectButton, out objectButtonDown);
+                //Debug.Log("Button state: " + objectButtonDown);
+                if (primaryButtonDown)
+                // if (XRControllerRightButtonPressed())
+                {
+                    string selectMessage = message + " Selected!";
+                    SpeakText(selectMessage);
+                    Debug.Log("Button Pressed!");
+                    Debug.Log(message + " Selected!");
+                    if (recentlySpokenObject != null)
+                    {
+                        Debug.Log("Playing sound to indicate distance between controller and virtual object...");
+                        localizationMode = true;
+                        soundPlayer.TriggerBeep(recentlySpokenObject.transform);
+                        if (secondaryButtonDown)
+                        {
+                            Debug.Log("Secondary button pressed!");
+                            localizationMode = false;
+                            soundPlayer.DeactivateBeep();
+                        }
+                        //soundPlayer.UpdatePosition(recentlySpokenObject.transform);
+                        //UpdatePosition(recentlySpokenObject.transform);
+                    }
+                }
+
+                await Task.Delay((int)(delay * 300));
+
             }
+
+            
         }
+        
+        await Task.Delay((int)(500f));
+
+        // string description = "In this 3D virtual reality scene, you are standing in a room with a desk. On the desk, there is a piece of paper with instructions, a book holder, and a key. The instructions paper on the desk has a 3D image of a treasure map, hinting at an adventurous journey ahead. As you explore the room, you notice a bookshelf filled with various books, some of which might contain clues or information about the adventure. The scene is set in a cartoonish, computer-generated world, inviting you to embark on an exciting quest using the objects at hand.";
+
+        // SpeakText(description);
+
     }
 
-    // IEnumerator PlayAudioClipWithDelay(SpatialSoundController soundController, string clipName, Vector3 position, float delay)
-    // {
-    //     yield return new WaitForSeconds(delay);
+    //private void HandleRightControllerButtonPress()
+    //{
+        //if (recentlySpokenObject != null)
+        //{
+            //// Play sound to indicate distance between controller and virtual object
+            ////soundPlayer.UpdatePosition(recentlySpokenObject.transform);
+            //UpdatePosition(recentlySpokenObject.transform);
+        //}
+    //}
 
-    //     // Play the audio clip at the specified position
-    //     soundController.PlayAudioClip(clipName, position);
-    // }
- 
+    //private bool XRControllerRightButtonPressed()
+    //{
+    //    bool buttonpress = Input.GetButtonDown("Oculus_CrossPlatform_SecondaryIndexTrigger");
+    //    Debug.Log("Button status:"+buttonpress);
+    //    // Replace "YOUR_RIGHT_CONTROLLER_BUTTON" with the actual button you want to use
+    //    // Check the Unity Input documentation for the appropriate button names
+    //    return Input.GetButtonDown("PrimaryButton");
+    //}
+
 
     async void SpeakText(string text)
     {
