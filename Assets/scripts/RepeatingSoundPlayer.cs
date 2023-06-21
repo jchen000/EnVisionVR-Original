@@ -49,8 +49,8 @@ public class RepeatingSoundPlayer : MonoBehaviour
 
             RaycastHit hit;
             bool hasHit = Physics.Raycast(controller.position, controllerDirection, out hit, maxDistance);
-            Debug.Log("Hit.Transform:" + hit.transform);
-            Debug.Log("Virtual Object Transform:" + virtualObjectTransform);
+            //Debug.Log("Hit.Transform:" + hit.transform);
+            //.Log("Virtual Object Transform:" + virtualObjectTransform);
             //if (hasHit && hit.transform == virtualObjectTransform)
             //{
             float distanceToObject = (controller.position - virtualObjectTransform.position).magnitude;
