@@ -42,12 +42,28 @@ def add_importance(data, hierarchy_level=0):
         for item in data:
             add_importance(item, hierarchy_level + 1)
 
+def add_description(data, hierarchy_level=0):
+    if isinstance(data, dict):
+        if "description" not in data:
+            data["description"] = "Hi!"
+            data["hierarchy_level"] = hierarchy_level
+            for key, value in data.items():
+                if key == "children" or key == "components":
+                    for item in value:
+                        add_description(item, hierarchy_level + 1)
+                else:
+                    add_description(value, hierarchy_level + 1)
+    elif isinstance(data, list):
+        for item in data:
+            add_description(item, hierarchy_level + 1)
+
 # Load JSON data from file
 with open('scene_graph.json') as file:
     json_data = json.load(file)
 
 # Add "importance" and "hierarchy_level" properties
 add_importance(json_data)
+add_description(json_data)
 
 # Save modified JSON data back to file
 with open('scene_graph_importance.json', 'w') as file:

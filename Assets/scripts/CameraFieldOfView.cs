@@ -13,10 +13,12 @@ public class CameraFieldOfView : MonoBehaviour
 {
     Camera mainCamera;
     Dictionary<string, float> importanceValues;
+    //Dictionary<string, string> descriptionDict;
     // private SpeechSynthesizer synthesizer;
     SpeechSynthesizer synthesizer;
     private AudioSource audioSource;
-    public bool localizationMode = false;  
+    public bool localizationMode = false;
+    //public bool objectDescriptionMode = false;
     // private AudioSource audioSource;
     public float volume = 1f;
     public float spatialBlend = 1f;
@@ -26,11 +28,14 @@ public class CameraFieldOfView : MonoBehaviour
     private GameObject recentlySpokenObject;
 
     public XRController rightHand;
+    //public XRController leftHand;
     public InputHelpers.Button primaryButton;
     public InputHelpers.Button secondaryButton;
     public InputHelpers.Button triggerButton;
     public bool primaryButtonDown;
     public bool secondaryButtonDown;
+    //public bool leftprimaryButtonDown;
+    //public bool leftsecondaryButtonDown;
     public bool triggerButtonDown;
     //private bool prevTriggerButtonState_ = false;
     //private RepeatingSoundPlayer repeatingSoundPlayer;
@@ -73,18 +78,15 @@ public class CameraFieldOfView : MonoBehaviour
         rightHand.inputDevice.IsPressed(secondaryButton, out secondaryButtonDown);
         triggerButtonDown = false;
         rightHand.inputDevice.IsPressed(triggerButton, out triggerButtonDown);
-        
-        if (secondaryButtonDown)
-        {
-            Debug.Log("Secondary Button Pressed!");
-        }
-        //if (triggerButtonDown && !prevTriggerButtonState_)
+        //leftprimaryButtonDown = false;
+        //leftHand.inputDevice.IsPressed(primaryButton, out leftprimaryButtonDown);
+        //if(leftprimaryButtonDown)
         //{
-        //    Debug.Log("Trigger Button Pressed!");
+        //    Debug.Log("Left primary button pressed!");
         //}
-        //Debug.Log(objectButtonDown);
+        //leftsecondaryButtonDown = false;
+        //leftHand.inputDevice.IsPressed(secondaryButton, out leftsecondaryButtonDown);
 
-        //prevTriggerButtonState_ = triggerButtonDown;
     }
 
     public async void CheckObjectsInFieldOfView()
@@ -143,7 +145,36 @@ public class CameraFieldOfView : MonoBehaviour
                 await Task.Delay((int)(delay * 800));
 
                 // Play the audio clip at the object's position
-                soundController.PlayAudioClip("Sweet Notification", obj.transform.position);
+                string path = obj.name;
+                Transform currentTransform = obj.transform;
+
+                while (currentTransform.parent != null)
+                {
+                    currentTransform = currentTransform.parent;
+                    path = currentTransform.name + "/" + path;
+                }
+                Debug.Log("Object path:" + path);
+                Debug.Log("Directory:" + currentTransform.name);
+                if (currentTransform.name == "Interactables")
+                {
+                    soundController.PlayAudioClip("Fantasy", obj.transform.position);
+                }
+                else if(currentTransform.name == "Interior")
+                {
+                    soundController.PlayAudioClip("Magic Spell", obj.transform.position);
+                }
+                else if (currentTransform.name == "Potions")
+                {
+                    soundController.PlayAudioClip("Magic", obj.transform.position);
+                }
+                else if (currentTransform.name == "Exterior")
+                {
+                    soundController.PlayAudioClip("Confirm", obj.transform.position);
+                }
+                else
+                {
+                    soundController.PlayAudioClip("Sweet Notification", obj.transform.position);
+                }
         
                 string objname = objectsInFieldOfView[i].name;
                 Debug.Log("Sound of " + objname);
@@ -164,7 +195,6 @@ public class CameraFieldOfView : MonoBehaviour
                 {
                     string selectMessage = message + " Selected!";
                     SpeakText(selectMessage);
-                    Debug.Log("Button Pressed!");
                     Debug.Log(message + " Selected!");
                     if (recentlySpokenObject != null)
                     {
@@ -181,6 +211,25 @@ public class CameraFieldOfView : MonoBehaviour
                         //UpdatePosition(recentlySpokenObject.transform);
                     }
                 }
+
+                //else if (leftprimaryButtonDown)
+                //{
+        
+                //    string describeMessage = "Describing " + message;
+                //    SpeakText(describeMessage);
+                //    Debug.Log("Describing " + message);
+                //    if (recentlySpokenObject != null)
+                //    {
+                //        Debug.Log("Describing object from importance json file");
+                //        objectDescriptionMode = true;
+                //        Debug.Log("GetObjectDescription(recentlySpokenObject.name):" + GetObjectDescription(recentlySpokenObject.name));
+                //        SpeakText(GetObjectDescription(recentlySpokenObject.name));
+                //        if (secondaryButtonDown)
+                //        {
+                //            objectDescriptionMode = false;
+                //        }
+                //    }
+                //}
 
                 await Task.Delay((int)(delay * 300));
 
@@ -249,13 +298,18 @@ public class CameraFieldOfView : MonoBehaviour
         if (File.Exists(jsonFilePath))
         {
             string jsonContent = File.ReadAllText(jsonFilePath);
-            SceneGraph sceneGraphImportance = JsonConvert.DeserializeObject<SceneGraph>(jsonContent);
+            SceneGraph sceneGraphContent = JsonConvert.DeserializeObject<SceneGraph>(jsonContent);
 
-            if (sceneGraphImportance != null)
+            // Parse the JSON string into SceneData object
+            //SceneGraph sceneGraph = JsonUtility.FromJson<SceneGraph>(jsonContent);
+            //if (sceneGraphImportance != null)
+            if (sceneGraphContent != null)
             {
                 importanceValues = new Dictionary<string, float>();
+                //descriptionDict = new Dictionary<string, string>();
                 // Traverse the scene graph and extract the importance values
-                TraverseSceneGraph(sceneGraphImportance.children);
+                //TraverseSceneGraph(sceneGraphImportance.children);
+                TraverseSceneGraph(sceneGraphContent.children);
 
                 Debug.Log("Importance values loaded successfully.");
             }
@@ -279,6 +333,10 @@ public class CameraFieldOfView : MonoBehaviour
         {
             if (child.importance.HasValue)
             {
+                //Debug.Log("Child_name:" + child.name);
+                //Debug.Log("Child_type:" + child.type);
+                //Debug.Log("Child_description:" + child.description);
+
                 if (!importanceValues.ContainsKey(child.name))
                 {
                     importanceValues.Add(child.name, child.importance.Value);
@@ -288,6 +346,34 @@ public class CameraFieldOfView : MonoBehaviour
                     Debug.LogWarning("Duplicate entry found for object: " + child.name);
                 }
             }
+            //else
+            //{
+            //    Debug.Log("Child_name:" + child.name);
+            //    Debug.Log("Child_type:" + child.type);
+            //    Debug.Log("Child_description:" + child.description);
+            //}
+
+            //if (!descriptionDict.ContainsKey(child.name) && child.description is string)
+            //{
+            //    Debug.Log("I am HERE!");
+            //    Debug.Log("Childname:" + child.name);
+            //    Debug.Log("Child_description:" + child.description);
+            //    descriptionDict.Add(child.name, child.description);
+            //}
+
+            //if (child.description != null)
+            //{
+            //    Debug.Log("I am here!");
+            //    if (!descriptionDict.ContainsKey(child.name))
+            //    {
+            //        descriptionDict.Add(child.name, child.description);
+            //        Debug.Log("Dictionary Add:" + child.name + child.description);
+            //    }
+            //    else
+            //    {
+            //        Debug.LogWarning("Duplicate entry found for object: " + child.name);
+            //    }
+            //}
 
             TraverseSceneGraph(child.children);
         }
@@ -303,6 +389,17 @@ public class CameraFieldOfView : MonoBehaviour
         Debug.LogWarning("Importance value not found for object: " + objectName);
         return 0f;
     }
+
+    //string GetObjectDescription(string objectName)
+    //{
+    //    if (descriptionDict.ContainsKey(objectName))
+    //    {
+    //        return descriptionDict[objectName];
+    //    }
+
+    //    Debug.LogWarning("Description not found for object: " + objectName);
+    //    return "";
+    //}
 }
 
 [System.Serializable]
@@ -313,6 +410,7 @@ public string type;
 public List<SceneGraph> children;
 public List<ComponentData> components;
 public float? importance;
+public string description;
 }
 
 [System.Serializable]
