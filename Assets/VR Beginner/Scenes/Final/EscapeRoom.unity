@@ -12477,6 +12477,46 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1837324663596057044, guid: d45e8a6999317d2428a51593da44d3ab,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1837324663596057044, guid: d45e8a6999317d2428a51593da44d3ab,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1837324663596057044, guid: d45e8a6999317d2428a51593da44d3ab,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1837324663596057044, guid: d45e8a6999317d2428a51593da44d3ab,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1837324663596057044, guid: d45e8a6999317d2428a51593da44d3ab,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1837324663596057044, guid: d45e8a6999317d2428a51593da44d3ab,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1837324663596057044, guid: d45e8a6999317d2428a51593da44d3ab,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1837324663596057044, guid: d45e8a6999317d2428a51593da44d3ab,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1837324663596057045, guid: d45e8a6999317d2428a51593da44d3ab,
         type: 3}
       propertyPath: m_TagString
@@ -12495,17 +12535,17 @@ PrefabInstance:
     - target: {fileID: 1837324663941945070, guid: d45e8a6999317d2428a51593da44d3ab,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -2.8
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1837324663941945070, guid: d45e8a6999317d2428a51593da44d3ab,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 3.104
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1837324663941945070, guid: d45e8a6999317d2428a51593da44d3ab,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -3.453
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1837324663941945070, guid: d45e8a6999317d2428a51593da44d3ab,
         type: 3}
@@ -13399,6 +13439,7 @@ GameObject:
   - component: {fileID: 1401981415}
   - component: {fileID: 1401981418}
   - component: {fileID: 1401981419}
+  - component: {fileID: 1401981420}
   m_Layer: 0
   m_Name: CameraController
   m_TagString: Untagged
@@ -13707,6 +13748,19 @@ MonoBehaviour:
   controller: {fileID: 1107399402}
   maxDistance: 10
   maxInterval: 3
+--- !u!114 &1401981420
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1401981404}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4df66373f97efbd4b85975b021310628, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  csvFilePath: Assets/descriptions.csv
 --- !u!4 &1407320322 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -4216859302048453862, guid: 825f6c1d307a67b41822de80e3aa4f80,
@@ -16578,6 +16632,21 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1358349926}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1682331008
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1682331003}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a62c647837d9634cb7360b40ad29806, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  width: 1920
+  height: 1080
+  screenshotPath: Screenshots/
 --- !u!1 &1686038531 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4180064242812793430, guid: dfa7c32c925f80d45adbcf6ed05adc61,
