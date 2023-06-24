@@ -30,6 +30,7 @@ public class SpatialSoundController : MonoBehaviour
             // Create a new game object for the audio source at the specified position
             GameObject audioSourceObject = new GameObject("AudioSourceObject");
             audioSourceObject.transform.position = position;
+            Debug.Log("Audio Source Position:" + position);
 
             // Attach the audio source to the new game object
             AudioSource audioSourceInstance = audioSourceObject.AddComponent<AudioSource>();
@@ -44,7 +45,7 @@ public class SpatialSoundController : MonoBehaviour
             audioSourceInstance.Play();
 
             // Destroy the game object after the audio clip has finished playing
-            //Destroy(audioSourceObject, audioClip.length);
+            Destroy(audioSourceObject, audioClip.length);
         }
         else
         {

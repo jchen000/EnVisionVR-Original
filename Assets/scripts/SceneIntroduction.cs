@@ -91,7 +91,7 @@ public class SceneIntroduction : MonoBehaviour
             float.TryParse(row[posYIndex], out float y);
             float.TryParse(row[posZIndex], out float z);
             float.TryParse(row[rotYIndex], out float rot);
-            var difference = (rotY - rot) * (rotY - rot) + 0.2 * ((posX - x) * (posX - x) + (posY - y) * (posY - y) + (posZ - z) * (posZ - z));
+            var difference = (rotY - rot) * (rotY - rot) + 0.4 * ((posX - x) * (posX - x) + (posY - y) * (posY - y) + (posZ - z) * (posZ - z));
             if (difference < prev_diff)
             {
                 description = row[descriptionIndex];

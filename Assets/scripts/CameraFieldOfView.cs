@@ -80,6 +80,8 @@ public class CameraFieldOfView : MonoBehaviour
         {
             Debug.Log("Left trigger button pressed!");
         }
+        Debug.Log("Camera Position:" + mainCamera.transform.position);
+        Debug.Log("Camera Orientation:" + mainCamera.transform.rotation);
     }
 
     public async void CheckObjectsInFieldOfView()
@@ -146,11 +148,11 @@ public class CameraFieldOfView : MonoBehaviour
                     currentTransform = currentTransform.parent;
                     path = currentTransform.name + "/" + path;
                 }
-                Debug.Log("Object path:" + path);
-                Debug.Log("Directory:" + currentTransform.name);
+                
+                Debug.Log("Position for" + obj.name + ": " + obj.transform.position);
                 if (currentTransform.name == "Interactables")
                 {
-                    soundController.PlayAudioClip("Fantasy", obj.transform.position);
+                    soundController.PlayAudioClip("Positive Notification", obj.transform.position);
                 }
                 else if (currentTransform.name == "Interior")
                 {

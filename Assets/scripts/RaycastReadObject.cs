@@ -1,5 +1,8 @@
 using UnityEngine;
 using System.Threading.Tasks;
+//using System.Collections;
+//using System.Collections.Generic;
+//using System.Runtime.InteropServices.ComTypes;
 
 public class RaycastReadObject : MonoBehaviour
 {
@@ -13,6 +16,20 @@ public class RaycastReadObject : MonoBehaviour
     public float maxDistance = 10f;
     public float maxInterval = 3f;
     private AudioSource audioSource;
+
+    //public bool highlight = false;
+    //private bool priorHighlight = false;
+    //public bool Guideline = false;
+    //private bool priorGuidline = false;
+    //public bool dynamicScanning = false;
+    //public Color highlightColor = Color.green;
+    //private Color priorHighlighColor = Color.white;
+    //public Color guidelineColor = Color.red;
+    //private Color priorGuidlineColor = Color.white;
+    //public float forwardFactor = 0.5f;
+    //private float priorForwardFactor = 0.5f;
+    //public float radius = 0.25f;
+    //private float priorRadius = 0.25f;
 
     void Start()
     {
@@ -30,35 +47,57 @@ public class RaycastReadObject : MonoBehaviour
 
         // Set the audio clip for the repeating sound
         audioSource.clip = clip;
+
+        //GameObject[] allObjects = FindObjectsOfType<GameObject>();
+        //foreach (GameObject obj in allObjects)
+        //{
+        //    if (obj.activeInHierarchy && obj.isSalience())
+        //    {
+        //        AddContours contours = obj.AddComponent<AddContours>();
+        //    }
+        //}
     }
 
     private void Update()
-    {
-        //if (cameraFieldOfView.lefttriggerButtonDown && !prevTriggerButtonState_)
-        
-            //Vector3 controllerDirection = controller.forward;
-            //RaycastHit hit;
-            //bool hasHit = Physics.Raycast(controller.position, controllerDirection, out hit, maxDistance);
-            //Debug.Log("Clicked on " + hit.transform.name);
-            //cameraFieldOfView.SpeakText(hit.transform.name);
-        
+    {        
         if (cameraFieldOfView.leftprimaryButtonDown && !prevPrimaryButtonState_)
         {
             Vector3 controllerDirection = controller.forward;
             RaycastHit hit;
             bool hasHit = Physics.Raycast(controller.position, controllerDirection, out hit, maxDistance);
-            //Debug.Log("Clicked on " + hit.transform.name);
             cameraFieldOfView.SpeakText(hit.transform.name);
+
+      //      GameObject[] allObjects = FindObjectsOfType<GameObject>();
+	     //   foreach (GameObject obj in allObjects)
+	     //   {
+	     //       if (obj.activeInHierarchy && obj.isSalience())
+	     //       {
+	     //           AddContours contours = obj.GetComponent<AddContours>();
+	     //           if (contours == null)
+	     //           {
+	     //               contours = obj.AddComponent<AddContours>();
+
+	     //           }
+	     //           contours.whetherHighlighted = highlight;
+	     //           contours.whetherLink = Guideline;
+	     //           contours.color = highlightColor;
+	     //           contours.guidlineColor = guidelineColor;
+		    //        contours.forwardFactor = forwardFactor;
+		    //        contours.radius = radius;
+	     //       }
+	     //   }
+	     //   priorHighlight = highlight;
+	     //   priorGuidline = Guideline;
+	     //   priorHighlighColor = highlightColor;
+	     //   priorGuidlineColor = guidelineColor;
+		    //priorForwardFactor = forwardFactor;
+		    //priorRadius = radius;
+
             rayReadTrigger = true;
         }
-        //if (cameraFieldOfView.leftsecondaryButtonDown)
-        //{
-        //    rayReadTrigger = false;
-        //}
+
         if (cameraFieldOfView.lefttriggerButtonDown)
-        {
-            //Debug.Log("Pressing Left Primary Button!");
-                
+        {                
             timer += Time.deltaTime;
 
             // Calculate the direction from the controller
@@ -67,15 +106,8 @@ public class RaycastReadObject : MonoBehaviour
             RaycastHit hit;
             bool hasHit = Physics.Raycast(controller.position, controllerDirection, out hit, maxDistance);
             
-            //await Task.Delay((int)(300f));
-            //Debug.Log("Hit.Transform:" + hit.transform);
-            //.Log("Virtual Object Transform:" + virtualObjectTransform);
-            //if (hasHit && hit.transform == virtualObjectTransform)
-            //{
-            //float distanceToObject = (controller.position - virtualObjectTransform.position).magnitude;
             float normalizedDistance = hit.distance / maxDistance;
-            //float normalizedDistance = distanceToObject / maxDistance;
-            float timeInterval = Mathf.Lerp(0.1f, maxInterval, normalizedDistance);
+            float timeInterval = Mathf.Lerp(0.2f, maxInterval, normalizedDistance);
 
             // Check if the timer has reached the interval
             if (timer >= timeInterval)
@@ -86,14 +118,7 @@ public class RaycastReadObject : MonoBehaviour
                 // Play the sound
                 audioSource.Play();
             }
-            //if (cameraFieldOfView.leftsecondaryButtonDown)
-            //{
-            //    Debug.Log("Left Secondary button pressed!");
-            //    localizationMode = false;
-            //    soundPlayer.DeactivateBeep();
-            //}
-            //}
-
+           
         }
         prevPrimaryButtonState_ = cameraFieldOfView.leftprimaryButtonDown;
     }

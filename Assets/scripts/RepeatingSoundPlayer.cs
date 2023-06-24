@@ -56,7 +56,7 @@ public class RepeatingSoundPlayer : MonoBehaviour
             float distanceToObject = (controller.position - virtualObjectTransform.position).magnitude;
             //float normalizedDistance = hit.distance / maxDistance;
             float normalizedDistance = distanceToObject / maxDistance;
-            float timeInterval = Mathf.Lerp(0.1f, maxInterval, normalizedDistance);
+            float timeInterval = Mathf.Lerp(0.2f, maxInterval, normalizedDistance);
 
             // Check if the timer has reached the interval
             if (timer >= timeInterval)
