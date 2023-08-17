@@ -40,7 +40,7 @@ def parse_json(json_data, coordinates, importance_values, names, x_list, y_list,
     plt.show()
 
 def plot_element(element, coordinates, importance_values, names, x_list, y_list, z_list):
-    if "name" and "components" in element and element["importance"]>0.2 and element["hierarchy_level"]<3 and element["components"][0]["position"]["x"]<8:
+    if "name" and "components" in element and element["importance"]>0.2 and element["hierarchy_level"]<3 and element["components"][0]["position"]["x"]<-2:
             # and "x" in element and "y" in element and "z" in element:
         name = element["name"]
         x = element["components"][0]["position"]["x"]
@@ -86,8 +86,8 @@ importance = np.array(importance_values)
 XXX = np.column_stack((x, y, z))
 
 # Define the Bayesian GMM with cuboid prior
-n_clusters = 5  # Number of clusters
-bounds = [(-8, 8), (-4, 4), (0, 4)]  # Bounds for each dimension
+n_clusters = 4  # Number of clusters
+bounds = [(-8, -3), (-2, 2), (0, 4)]  # Bounds for each dimension
 
 gmm = BayesianGaussianMixture(n_components=n_clusters, covariance_type='full',
                               weight_concentration_prior_type='dirichlet_process')
@@ -206,13 +206,13 @@ for k in range(n_clusters):
     if np.linalg.norm(camera_pos1-np.array([0,0,2]))<np.linalg.norm(camera_pos2-np.array([0,0,2])):
         print("Camera facing axis negative direction")
         print(f"Camera Position: {camera_pos1[0]}, {camera_pos1[1]}, {camera_pos1[2]}")
-        ax.scatter(camera_pos1[0], camera_pos1[1], camera_pos1[2], color=sns.color_palette()[k], marker='X', s=100, label=f'Camera {k+1}')
-        ax.quiver(camera_pos1[0], camera_pos1[1], camera_pos1[2], -unit_vec[0]/2, -unit_vec[1]/2, -unit_vec[2]/2, color=sns.color_palette()[k])
+        # ax.scatter(camera_pos1[0], camera_pos1[1], camera_pos1[2], color=sns.color_palette()[k], marker='X', s=100, label=f'Camera {k+1}')
+        # ax.quiver(camera_pos1[0], camera_pos1[1], camera_pos1[2], -unit_vec[0]/2, -unit_vec[1]/2, -unit_vec[2]/2, color=sns.color_palette()[k])
     else:
         print("Camera facing axis positive direction")
         print(f"Camera Position: {camera_pos2[0]}, {camera_pos2[1]}, {camera_pos2[2]}")
-        ax.scatter(camera_pos2[0], camera_pos2[1], camera_pos2[2], color=sns.color_palette()[k], marker='X', s=100, label=f'Camera {k + 1}')
-        ax.quiver(camera_pos2[0], camera_pos2[1], camera_pos2[2], unit_vec[0]/2, unit_vec[1]/2, unit_vec[2]/2, color=sns.color_palette()[k])
+        # ax.scatter(camera_pos2[0], camera_pos2[1], camera_pos2[2], color=sns.color_palette()[k], marker='X', s=100, label=f'Camera {k + 1}')
+        # ax.quiver(camera_pos2[0], camera_pos2[1], camera_pos2[2], unit_vec[0]/2, unit_vec[1]/2, unit_vec[2]/2, color=sns.color_palette()[k])
     # print(np.linalg.norm(camera_pos1), np.linalg.norm(camera_pos2))
     # print(camera_pos1>camera_pos2)
 
@@ -239,14 +239,14 @@ for k in range(n_clusters):
     ax.add_collection3d(
         Poly3DCollection(cuboid_faces, linewidths=0.08, edgecolors='black', facecolors=sns.color_palette()[k], alpha=0.1))
 
-ax.set_box_aspect([16, 8, 4])
+ax.set_box_aspect([6, 5, 3])
 
 ax.set_xlabel('X')
 ax.set_ylabel('Z')
 ax.set_zlabel('Y')
-ax.set_xlim(-8, 8)
-ax.set_ylim(-4, 4)
-ax.set_zlim(0, 4)
+ax.set_xlim(-8, -2)
+ax.set_ylim(-2.5, 2.5)
+ax.set_zlim(0, 3)
 ax.set_title('Optimal Camera Positions for Virtual Object Clusters')
 ax.legend()
 

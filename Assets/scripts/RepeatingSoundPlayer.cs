@@ -67,6 +67,12 @@ public class RepeatingSoundPlayer : MonoBehaviour
                 // Play the sound
                 audioSource.Play();
             }
+
+            if (distanceToObject< 0.15f)
+            {
+                rightHand.SendHapticImpulse(0.5f, 0.5f);
+            }
+
             //}
             if (secondaryButtonDown)
             {

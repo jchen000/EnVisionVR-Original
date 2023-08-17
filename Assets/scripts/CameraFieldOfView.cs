@@ -8,6 +8,7 @@ using Microsoft.CognitiveServices.Speech.Audio;
 using System.Threading.Tasks;
 using System.Collections;
 using UnityEngine.XR.Interaction.Toolkit;
+using System;
 
 public class CameraFieldOfView : MonoBehaviour
 {
@@ -58,30 +59,21 @@ public class CameraFieldOfView : MonoBehaviour
         // Check if the button on the right hand controller is pressed
         primaryButtonDown = false;//OVRInput.Get(OVRInput.Button.One);
         rightHand.inputDevice.IsPressed(primaryButton, out primaryButtonDown);
+        
         secondaryButtonDown = false;
         rightHand.inputDevice.IsPressed(secondaryButton, out secondaryButtonDown);
+        
         triggerButtonDown = false;
         rightHand.inputDevice.IsPressed(triggerButton, out triggerButtonDown);
+        
         leftprimaryButtonDown = false;
         leftHand.inputDevice.IsPressed(primaryButton, out leftprimaryButtonDown);
-        if (leftprimaryButtonDown)
-        {
-            Debug.Log("Left primary button pressed!");
-        }
+        
         leftsecondaryButtonDown = false;
         leftHand.inputDevice.IsPressed(secondaryButton, out leftsecondaryButtonDown);
-        if (leftsecondaryButtonDown)
-        {
-            Debug.Log("Left secondary button pressed!");
-        }
+        
         lefttriggerButtonDown = false;
         leftHand.inputDevice.IsPressed(triggerButton, out lefttriggerButtonDown);
-        if (lefttriggerButtonDown)
-        {
-            Debug.Log("Left trigger button pressed!");
-        }
-        Debug.Log("Camera Position:" + mainCamera.transform.position);
-        Debug.Log("Camera Orientation:" + mainCamera.transform.rotation);
     }
 
     public async void CheckObjectsInFieldOfView()
@@ -101,7 +93,7 @@ public class CameraFieldOfView : MonoBehaviour
             // Get the object's transform component to retrieve its position
             Transform objTransform = obj.transform;
             Vector3 objPosition = objTransform.position;
-
+            //Debug.LogError("Checking visibility of: " + obj.name);
             // Check if the object is within the camera's field of view
             if (IsObjectVisible(objPosition, mainCamera.transform.position, mainCamera.transform.rotation, mainCamera.fieldOfView))
             {
@@ -114,7 +106,9 @@ public class CameraFieldOfView : MonoBehaviour
         {
             float originalImportance = GetImportanceValue(obj.name);
             float distance = Vector3.Distance(obj.transform.position, mainCamera.transform.position);
-            float newImportance = originalImportance * (Mathf.Exp(-distance) - Mathf.Exp(-8));
+            float newImportance = originalImportance * (Mathf.Exp(-distance) - Mathf.Exp(-5));
+            if (distance > 5)
+                newImportance = 0;
             importanceValues[obj.name] = newImportance; // Update the importance value in the dictionary
         }
 
@@ -129,8 +123,8 @@ public class CameraFieldOfView : MonoBehaviour
             {
                 string message = obj.name;
                 string messageFull = obj.name + " is within the field of view. Position: " + obj.transform.position + " Importance: " + GetImportanceValue(obj.name);
-                Debug.Log(messageFull);
-                SpeakText(message);
+                Debug.LogError(messageFull);
+                SpeakText(message.Replace("_", " "));
 
                 // Store the most recently spoken object
                 recentlySpokenObject = obj;
@@ -149,7 +143,7 @@ public class CameraFieldOfView : MonoBehaviour
                     path = currentTransform.name + "/" + path;
                 }
                 
-                Debug.Log("Position for" + obj.name + ": " + obj.transform.position);
+                //Debug.LogError("Position for" + obj.name + ": " + obj.transform.position);
                 if (currentTransform.name == "Interactables")
                 {
                     soundController.PlayAudioClip("Positive Notification", obj.transform.position);
@@ -172,7 +166,7 @@ public class CameraFieldOfView : MonoBehaviour
                 }
 
                 string objname = objectsInFieldOfView[i].name;
-                Debug.Log("Sound of " + objname);
+                Debug.LogError("Sound of " + objname);
 
                 await Task.Delay((int)(delay * 500));
 
@@ -180,16 +174,17 @@ public class CameraFieldOfView : MonoBehaviour
                 // if (XRControllerRightButtonPressed())
                 {
                     string selectMessage = message + " Selected!";
-                    SpeakText(selectMessage);
-                    Debug.Log(message + " Selected!");
+                    SpeakText(selectMessage.Replace("_", " "));
+                    Debug.LogError(message + " Selected!");
                     if (recentlySpokenObject != null)
                     {
-                        Debug.Log("Playing sound to indicate distance between controller and virtual object...");
+                        Debug.LogError("Playing sound to indicate distance between controller and virtual object...");
                         localizationMode = true;
                         soundPlayer.TriggerBeep(recentlySpokenObject.transform);
+                        
                         if (secondaryButtonDown)
                         {
-                            Debug.Log("Secondary button pressed!");
+                            //Debug.LogError("Right Controller Secondary button pressed!");
                             localizationMode = false;
                             soundPlayer.DeactivateBeep();
                         }
@@ -206,6 +201,8 @@ public class CameraFieldOfView : MonoBehaviour
     {
         await synthesizer.SpeakTextAsync(text);
     }
+
+   
 
     bool IsObjectVisible(Vector3 objectPosition, Vector3 cameraPosition, Quaternion cameraRotation, float fieldOfView)
     {
@@ -229,6 +226,7 @@ public class CameraFieldOfView : MonoBehaviour
     void LoadImportanceValues()
     {
         string jsonFilePath = Path.Combine(Application.dataPath, "scene_graph_importance.json");
+        //Debug.LogError("Importance Values Loaded from:" + jsonFilePath);
 
         if (File.Exists(jsonFilePath))
         {
@@ -241,7 +239,7 @@ public class CameraFieldOfView : MonoBehaviour
                 descriptions = new Dictionary<string, string>(); // New dictionary for descriptions
                 TraverseSceneGraph(sceneGraphContent.children);
 
-                Debug.Log("Importance values and descriptions loaded successfully.");
+                Debug.LogError("Importance values and descriptions loaded successfully.");
             }
             else
             {
@@ -269,7 +267,7 @@ public class CameraFieldOfView : MonoBehaviour
                 }
                 else
                 {
-                    Debug.LogWarning("Duplicate entry found for object: " + child.name);
+                    //Debug.LogWarning("Duplicate entry found for object: " + child.name);
                 }
             }
 
@@ -277,12 +275,12 @@ public class CameraFieldOfView : MonoBehaviour
             {
                 if (!descriptions.ContainsKey(child.name))
                 {
-                    Debug.Log("Child_description:" + child.description);
+                    //Debug.LogError("Child_description:" + child.description);
                     descriptions.Add(child.name, child.description);
                 }
                 else
                 {
-                    Debug.LogWarning("Duplicate description found for object: " + child.name);
+                    //Debug.LogWarning("Duplicate description found for object: " + child.name);
                 }
             }
 
@@ -297,7 +295,7 @@ public class CameraFieldOfView : MonoBehaviour
             return importanceValues[objectName];
         }
 
-        Debug.LogWarning("Importance value not found for object: " + objectName);
+        //Debug.LogWarning("Importance value not found for object: " + objectName);
         return 0f;
     }
 

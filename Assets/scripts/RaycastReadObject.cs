@@ -65,7 +65,12 @@ public class RaycastReadObject : MonoBehaviour
             Vector3 controllerDirection = controller.forward;
             RaycastHit hit;
             bool hasHit = Physics.Raycast(controller.position, controllerDirection, out hit, maxDistance);
-            cameraFieldOfView.SpeakText(hit.transform.name);
+            string hitobjname = hit.transform.name;
+            if (hitobjname == "PotionBottle_1")
+                hitobjname = "Purple Potion Bottle";
+            if (hitobjname == "PotionBottle_2")
+                hitobjname = "Green Potion Bottle";
+            cameraFieldOfView.SpeakText(hitobjname.Replace("_", " "));
 
       //      GameObject[] allObjects = FindObjectsOfType<GameObject>();
 	     //   foreach (GameObject obj in allObjects)

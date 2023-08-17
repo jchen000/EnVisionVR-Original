@@ -1,6 +1,9 @@
 using UnityEngine;
 using System.IO;
 using System.Collections.Generic;
+using System.Threading.Tasks;
+using Microsoft.CognitiveServices.Speech;
+using Microsoft.CognitiveServices.Speech.Audio;
 
 public class SceneIntroduction : MonoBehaviour
 {
@@ -11,20 +14,27 @@ public class SceneIntroduction : MonoBehaviour
     private Dictionary<string, int> headerIndices;
     private List<string[]> csvData;
     private bool prevSecondaryButtonState_ = false;
+    private bool isSpeaking_;
     private string description;
     private string cameraAnchor;
+    private SpeechSynthesizer speechSynthesizer;
 
     void Start()
     {
+        SpeechConfig speechConfig = SpeechConfig.FromSubscription("4de1d19d8bfe4fae9f46a2a3e848d548", "uksouth");
+
+        // Create SpeechSynthesizer instance
+        speechSynthesizer = new SpeechSynthesizer(speechConfig);
         cameraFieldOfView = GetComponent<CameraFieldOfView>();
         cameraController = GetComponent<CameraController>();
         mainCamera = Camera.main;
+        isSpeaking_ = false;
 
         // Parse the CSV file
         ParseCSV();
 
         // Check for specific values and print the description
-        CheckAndPrintDescription(-3.47f, 1.2f, 0f, 120f);      
+        //CheckAndPrintDescription(-0.55f, 1f, -0.9f, 45f);      
 
     }
 
@@ -36,6 +46,13 @@ public class SceneIntroduction : MonoBehaviour
             Vector3 cameraRotation = mainCamera.transform.eulerAngles;
             CheckAndPrintDescription(cameraPosition.x, cameraPosition.y, cameraPosition.z, cameraRotation.y);
         }
+
+        // Check if the primary button is pressed to cancel speech
+        if (cameraFieldOfView.leftprimaryButtonDown && isSpeaking_)
+        {
+            CancelSpeech();
+        }
+
         prevSecondaryButtonState_ = cameraFieldOfView.leftsecondaryButtonDown;
     }
 
@@ -73,7 +90,7 @@ public class SceneIntroduction : MonoBehaviour
         }
     }
 
-    void CheckAndPrintDescription(float posX, float posY, float posZ, float rotY)
+    private async void CheckAndPrintDescription(float posX, float posY, float posZ, float rotY)
     {
         int anchorIndex = headerIndices["Camera Anchor"];
         int posXIndex = headerIndices["PositionX"];
@@ -81,7 +98,7 @@ public class SceneIntroduction : MonoBehaviour
         int posZIndex = headerIndices["PositionZ"];
         int rotYIndex = headerIndices["RotationY"];
         int descriptionIndex = headerIndices["Description"];
-        double prev_diff = 100000000f;
+        var prev_diff = 100000000f;
 
         // Iterate through the CSV data
         for (int i = 0; i < csvData.Count; i++)
@@ -91,25 +108,46 @@ public class SceneIntroduction : MonoBehaviour
             float.TryParse(row[posYIndex], out float y);
             float.TryParse(row[posZIndex], out float z);
             float.TryParse(row[rotYIndex], out float rot);
-            var difference = (rotY - rot) * (rotY - rot) + 0.4 * ((posX - x) * (posX - x) + (posY - y) * (posY - y) + (posZ - z) * (posZ - z));
+            var difference = (rotY - rot) * (rotY - rot) + 0.8 * ((posX - x) * (posX - x) + (posY - y) * (posY - y) + (posZ - z) * (posZ - z));
             if (difference < prev_diff)
             {
                 description = row[descriptionIndex];
                 cameraAnchor = row[anchorIndex];
+                prev_diff = (float)difference;
             }
-
-            prev_diff = difference;
         }
         Debug.Log("Matching Camera Anchor:" + cameraAnchor);
-        cameraFieldOfView.SpeakText(description);
+        //cameraFieldOfView.SpeakText(description);
+        // Start the speech service
+        await StartSpeech(description);
     }
-
-    void PrintCameraTransform()
+    private async Task StartSpeech(string text)
     {
-        Vector3 cameraPosition = mainCamera.transform.position;
-        Vector3 cameraRotation = mainCamera.transform.eulerAngles;
-
-        Debug.Log("Camera Position - X: " + cameraPosition.x + ", Y: " + cameraPosition.y + ", Z: " + cameraPosition.z);
-        Debug.Log("Camera Rotation - X: " + cameraRotation.x + ", Y: " + cameraRotation.y + ", Z: " + cameraRotation.z);
+        // Set the speech synthesizer properties and start speaking
+        speechSynthesizer.SynthesisStarted += SpeechSynthesizer_SynthesisStarted;
+        speechSynthesizer.SynthesisCompleted += SpeechSynthesizer_SynthesisCompleted;
+        await speechSynthesizer.SpeakTextAsync(text);
     }
+
+    private void SpeechSynthesizer_SynthesisStarted(object sender, System.EventArgs e)
+    {
+        // Speech synthesis has started
+        isSpeaking_ = true;
+    }
+
+    private void SpeechSynthesizer_SynthesisCompleted(object sender, System.EventArgs e)
+    {
+        // Speech synthesis has completed
+        isSpeaking_ = false;
+    }
+
+    private void CancelSpeech()
+    {
+        // Cancel the speech synthesis
+        speechSynthesizer.SynthesisStarted -= SpeechSynthesizer_SynthesisStarted;
+        speechSynthesizer.SynthesisCompleted -= SpeechSynthesizer_SynthesisCompleted;
+        speechSynthesizer.StopSpeakingAsync();
+        isSpeaking_ = false;
+    }
+
 }
