@@ -1,2 +1,2 @@
-# VR-Escape-Room
-Unity VR Escape Room for scene interpretation and accessibility design.
+# Original EnVisionVR System applied in the VR Escape Room Scene
+EnVisionVR for scene interpretation and visual accessibility design in virtual reality.
